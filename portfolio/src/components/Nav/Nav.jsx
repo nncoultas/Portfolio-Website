@@ -7,6 +7,7 @@ import accountCircle from './baseline-account_circle-24px.svg';
 import note from './baseline-note-24px.svg';
 import home from './baseline-home-24px.svg';
 import subject from './baseline-subject-24px.svg';
+import { Link } from 'react-router-dom';
 
 class Nav extends React.Component {
   state = {
@@ -23,17 +24,36 @@ class Nav extends React.Component {
       <div>
         <AppBar position="static" style={{ backgroundColor: '#2a6ccf' }}>
           <Tabs value={value} onChange={this.handleChange} centered>
-            <Tab label="Home" icon={<img src={home} alt="home" />} />
+            <Tab
+              label="Home"
+              icon={<img src={home} alt="home" />}
+              component={Link}
+              to="/Home"
+            />
             <Tab
               label="About"
               icon={<img src={accountCircle} alt="account-cirlce" />}
+              component={Link}
+              to="/About"
             />
-            <Tab label="Projects" icon={<img src={note} alt="note" />} />
-            <Tab label="Blog" icon={<img src={subject} alt="subject" />} />
+            <Tab
+              label="Projects"
+              icon={<img src={note} alt="note" />}
+              component={Link}
+              to="/Projects"
+            />
+            <Tab
+              label="Blog"
+              icon={<img src={subject} alt="subject" />}
+              component={Link}
+              to="/Blog"
+            />
             <Tab
               label="Contact"
               href="#basic-tabs"
               icon={<img src={fingerPrint} alt="finger-print" />}
+              component={Link}
+              to="/Contact"
             />
           </Tabs>
         </AppBar>
