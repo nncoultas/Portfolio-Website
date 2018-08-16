@@ -28,7 +28,7 @@ class Nav extends React.Component {
               label="Home"
               icon={<img src={home} alt="home" />}
               component={Link}
-              to="/Home"
+              to="/"
             />
             <Tab
               label="About"
