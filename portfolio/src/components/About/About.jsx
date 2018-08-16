@@ -3,7 +3,10 @@ import './About.css';
 import HeadShot from './image1.jpeg';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
+import Chip from '@material-ui/core/Chip';
 import { withStyles } from '@material-ui/core/styles';
+import GitHubIcon from './25231.svg';
+import LinkedInIcon from './61109.svg';
 
 const styles = {
   avatar: {
@@ -11,7 +14,19 @@ const styles = {
     height: 287,
     borderRadius: 32,
     position: 'absolute',
-    marginLeft: 996
+    marginLeft: 1073
+  },
+  chipOne: {
+    backgroundColor: 'white',
+    marginLeft: 604,
+    marginTop: 138,
+    position: 'absolute'
+  },
+  chipTwo: {
+    backgroundColor: 'white',
+    marginLeft: 665,
+    marginTop: 138,
+    position: 'absolute'
   }
 };
 
@@ -35,6 +50,14 @@ class About extends React.Component {
             </div>
           </Typography>
           <Avatar src={HeadShot} className={classes.avatar} />
+          <Chip
+            avatar={<Avatar src={GitHubIcon} alt="Git Hub Icon" />}
+            className={classes.chipOne}
+          />
+          <Chip
+            avatar={<Avatar src={LinkedInIcon} alt="Git Hub Icon" />}
+            className={classes.chipTwo}
+          />
         </div>
       </div>
     );

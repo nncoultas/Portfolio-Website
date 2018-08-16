@@ -10,20 +10,21 @@
 
 .aboutMe {
   width: 24%;
-  margin-left: 38%;
+  margin-left: 43%;
   font-size: 5rem;
   border-bottom: 1px solid black;
 }
 
 .jobTitle {
   opacity: 0.8;
+  margin-left: 10%;
   margin-top: 2%;
   color: darkblue;
 }
 
 .elevatorPitch {
   width: 35%;
-  margin-left: 32%;
+  margin-left: 38%;
   margin-top: 2%;
   font-size: 1rem;
   color: darkblue;
