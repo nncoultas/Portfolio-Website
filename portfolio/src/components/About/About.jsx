@@ -7,6 +7,7 @@ import Chip from '@material-ui/core/Chip';
 import { withStyles } from '@material-ui/core/styles';
 import GitHubIcon from './25231.svg';
 import LinkedInIcon from './61109.svg';
+import EmailIcon from './54215.svg';
 
 const styles = {
   avatar: {
@@ -18,50 +19,68 @@ const styles = {
   },
   chipOne: {
     backgroundColor: 'white',
-    marginLeft: 604,
-    marginTop: 138,
+    marginLeft: -39,
+    marginTop: 90,
     position: 'absolute'
   },
   chipTwo: {
     backgroundColor: 'white',
-    marginLeft: 665,
-    marginTop: 138,
+    marginLeft: 114,
+    marginTop: 90,
+    position: 'absolute'
+  },
+  chipThree: {
+    backgroundColor: 'white',
+    marginLeft: 246,
+    marginTop: 90,
     position: 'absolute'
   }
 };
 
-class About extends React.Component {
-  render() {
-    const { classes } = this.props;
-    return (
-      <div>
-        <div className="topPage">
-          <Typography variant="display3" color="secondary">
-            <div className="aboutMe">About Me</div>
-          </Typography>
-          <Typography variant="headline" color="primary">
-            <div className="jobTitle">Software Engineer from Reno, Nevada</div>
-          </Typography>
-          <Typography color="primary">
-            <div className="elevatorPitch">
-              My Passion has always been working with computers. While I've had
-              an interest in the hardware side of things my real Passion is the
-              software side of things and creating web applications.
-            </div>
-          </Typography>
-          <Avatar src={HeadShot} className={classes.avatar} />
+const About = props => {
+  const { classes } = props;
+  return (
+    <div>
+      <div className="topPage">
+        <Typography variant="display3" color="secondary">
+          <div className="aboutMe">About Me</div>
+        </Typography>
+        <Typography variant="headline" color="primary">
+          <div className="jobTitle">Software Engineer from Reno, Nevada</div>
+        </Typography>
+        <Typography color="primary">
+          <div className="elevatorPitch">
+            My Passion has always been working with computers. While I've had an
+            interest in the hardware side of things my real Passion is the
+            software side of things and creating web applications.
+          </div>
+        </Typography>
+        <Avatar src={HeadShot} className={classes.avatar} />
+
+        <a href={'http://github.com/nncoultas'} title="View My Github">
           <Chip
-            avatar={<Avatar src={GitHubIcon} alt="Git Hub Icon" />}
+            avatar={<Avatar src={GitHubIcon} alt="GitHub Icon" />}
             className={classes.chipOne}
           />
+        </a>
+        <a
+          href={'https://www.linkedin.com/in/nick-coultas-a1491b167/'}
+          title="Connect With Me On LinkedIn"
+        >
           <Chip
-            avatar={<Avatar src={LinkedInIcon} alt="Git Hub Icon" />}
+            avatar={<Avatar src={LinkedInIcon} alt="LinkedIn Icon" />}
             className={classes.chipTwo}
           />
-        </div>
+        </a>
+        <a title="Click The Icon To Copy My Email!">
+          <Chip
+            avatar={<Avatar src={EmailIcon} alt="EmailIcon Icon" />}
+            className={classes.chipThree}
+          />
+        </a>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default withStyles(styles)(About);
