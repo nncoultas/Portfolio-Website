@@ -37,50 +37,64 @@ const styles = {
   }
 };
 
-const About = props => {
-  const { classes } = props;
-  return (
-    <div>
-      <div className="topPage">
-        <Typography variant="display3" color="secondary">
-          <div className="aboutMe">About Me</div>
-        </Typography>
-        <Typography variant="headline" color="primary">
-          <div className="jobTitle">Software Engineer from Reno, Nevada</div>
-        </Typography>
-        <Typography color="primary">
-          <div className="elevatorPitch">
-            My Passion has always been working with computers. While I've had an
-            interest in the hardware side of things my real Passion is the
-            software side of things and creating web applications.
-          </div>
-        </Typography>
-        <Avatar src={HeadShot} className={classes.avatar} />
+class About extends React.Component {
+  copyEmail = () => {
+    let textField = document.createElement('textarea');
+    textField.innerText = 'nncoultas@yahoo.com';
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand('copy');
+    textField.remove();
+    document.getElementById('email').title =
+      'My email address has been copied to your clipboard!';
+  };
 
-        <a href={'http://github.com/nncoultas'} title="View My Github">
-          <Chip
-            avatar={<Avatar src={GitHubIcon} alt="GitHub Icon" />}
-            className={classes.chipOne}
-          />
-        </a>
-        <a
-          href={'https://www.linkedin.com/in/nick-coultas-a1491b167/'}
-          title="Connect With Me On LinkedIn"
-        >
-          <Chip
-            avatar={<Avatar src={LinkedInIcon} alt="LinkedIn Icon" />}
-            className={classes.chipTwo}
-          />
-        </a>
-        <a title="Click The Icon To Copy My Email!">
-          <Chip
-            avatar={<Avatar src={EmailIcon} alt="EmailIcon Icon" />}
-            className={classes.chipThree}
-          />
-        </a>
+  render() {
+    const { classes } = this.props;
+    return (
+      <div>
+        <div className="topPage">
+          <Typography variant="display3" color="secondary">
+            <div className="aboutMe">About Me</div>
+          </Typography>
+          <Typography variant="headline" color="primary">
+            <div className="jobTitle">Software Engineer from Reno, Nevada</div>
+          </Typography>
+          <Typography color="primary">
+            <div className="elevatorPitch">
+              My Passion has always been working with computers. While I've had
+              an interest in the hardware side of things my real Passion is the
+              software side of things and creating web applications.
+            </div>
+          </Typography>
+          <Avatar src={HeadShot} className={classes.avatar} />
+
+          <a href={'http://github.com/nncoultas'} title="View My Github">
+            <Chip
+              avatar={<Avatar src={GitHubIcon} alt="GitHub Icon" />}
+              className={classes.chipOne}
+            />
+          </a>
+          <a
+            href={'https://www.linkedin.com/in/nick-coultas-a1491b167/'}
+            title="Connect With Me On LinkedIn"
+          >
+            <Chip
+              avatar={<Avatar src={LinkedInIcon} alt="LinkedIn Icon" />}
+              className={classes.chipTwo}
+            />
+          </a>
+          <a title="Click The Icon To Copy My Email!" id="email">
+            <Chip
+              avatar={<Avatar src={EmailIcon} alt="EmailIcon Icon" />}
+              className={classes.chipThree}
+              onClick={this.copyEmail}
+            />
+          </a>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default withStyles(styles)(About);
