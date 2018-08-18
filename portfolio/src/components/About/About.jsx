@@ -60,14 +60,17 @@ const styles = {
   skillsTitle: {
     textAlign: 'center'
   },
-  languagesChip: {
-    marginLeft: 714,
-    marginTop: 23
-  },
+  // languagesChip: {
+  //   marginLeft: 714,
+  //   marginTop: 23
+  // },
+  // chipList: {
+  //   marginTop: 32,
+  //   display: 'flex',
+  //   width: 85
+  // },
   chipList: {
-    marginTop: 32,
-    display: 'flex',
-    width: 85
+    marginBottom: 32
   }
 };
 class About extends React.Component {
@@ -262,21 +265,76 @@ class About extends React.Component {
           >
             <div className="frontEnd">Front-End</div>
           </Typography>
-          <Chip
-            label="Javascript"
-            color="primary"
-            className={classes.languagesChip}
-          />
-          <Chip
-            label="C"
-            color="primary"
-            className={`${classes.languagesChip} ${classes.chipList}`}
-          />
-          <Chip
-            label="Python"
-            color="primary"
-            className={`${classes.languagesChip} ${classes.chipList}`}
-          />
+          <div className="languagesSkills">
+            <Chip
+              label="Javascript"
+              color="primary"
+              className={classes.chipList}
+            />
+            <Chip label="C" color="primary" className={classes.chipList} />
+            <Chip label="Python" color="primary" className={classes.chipList} />
+          </div>
+          <div className="frontEndSkills">
+            <Chip label="React" color="primary" className={classes.chipList} />
+            <Chip
+              label="React-Router"
+              color="primary"
+              className={classes.chipList}
+            />
+            <Chip label="Redux" color="primary" className={classes.chipList} />
+            <Chip
+              label="Bootstrap"
+              color="primary"
+              className={classes.chipList}
+            />
+            <Chip
+              label="Material-UI"
+              color="primary"
+              className={classes.chipList}
+            />
+            <Chip
+              label="HTML/CSS"
+              color="primary"
+              className={classes.chipList}
+            />
+            <Chip label="LESS" color="primary" className={classes.chipList} />
+            <Chip
+              label="HTTP/AJAX"
+              color="primary"
+              className={classes.chipList}
+            />
+            <Chip label="Axios" color="primary" className={classes.chipList} />
+          </div>
+          <div className="backEndSkills">
+            <Chip
+              label="MongoDB"
+              color="primary"
+              className={classes.chipList}
+            />
+            <Chip
+              label="PostgreSQL"
+              color="primary"
+              className={classes.chipList}
+            />
+            <Chip
+              label="Sequelize"
+              color="primary"
+              className={classes.chipList}
+            />
+            <Chip
+              label="Node.js"
+              color="primary"
+              className={classes.chipList}
+            />
+            <Chip
+              label="Express.js"
+              color="primary"
+              className={classes.chipList}
+            />
+            <Chip label="Django" color="primary" className={classes.chipList} />
+            <Chip label="JWT" color="primary" className={classes.chipList} />
+            <Chip label="Bcrypt" color="primary" className={classes.chipList} />
+          </div>
         </div>
       </div>
     );

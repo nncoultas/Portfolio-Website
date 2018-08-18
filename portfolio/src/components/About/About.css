@@ -66,3 +66,28 @@
 .frontEnd {
   margin-top: -32px;
 }
+
+.languagesSkills {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left: 714px;
+  margin-top: 11px;
+}
+
+.frontEndSkills {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-left: 904px;
+  margin-top: 11px;
+}
+
+.backEndSkills {
+  position: absolute;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 1112px;
+  margin-top: 11px;
+}
