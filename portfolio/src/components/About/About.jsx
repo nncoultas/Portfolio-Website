@@ -34,9 +34,11 @@ const styles = {
     marginLeft: 246,
     marginTop: 90,
     position: 'absolute'
+  },
+  expStyle: {
+    textAlign: 'center'
   }
 };
-
 class About extends React.Component {
   copyEmail = () => {
     let textField = document.createElement('textarea');
@@ -91,6 +93,87 @@ class About extends React.Component {
               onClick={this.copyEmail}
             />
           </a>
+        </div>
+        <div className="border" />
+        <div className="middlePage">
+          <Typography
+            variant="display3"
+            color="secondary"
+            className={classes.expStyle}
+          >
+            Experience
+          </Typography>
+          <Typography
+            variant="headline"
+            color="primary"
+            className={classes.expStyle}
+          >
+            <div className="engineer">Software Engineer</div>
+          </Typography>
+          <Typography
+            variant="title"
+            color="primary"
+            className={classes.expStyle}
+          >
+            <div className="lambda">
+              Lambda School | February 2018 - August 2018
+            </div>
+          </Typography>
+          <Typography color="primary" className={classes.expStyle}>
+            <div className="bullet1">
+              6+ months Full-Time CS Fundamental/software development program
+            </div>
+          </Typography>
+          <Typography color="primary" className={classes.expStyle}>
+            <div className="bullet2">
+              Gained experience working with clients and understanding client
+              demands by <br /> collaborating on full lifecycle projects.{' '}
+            </div>
+          </Typography>
+          <Typography color="primary" className={classes.expStyle}>
+            <div className="bullet3">
+              Completed all curriculum coursework including; <br /> React, react
+              native, redux, node, express, mongoDB, mocha, chai, python,
+              django. <br />
+              Hands on experience with client and server testing, paired
+              programming, and CS fundamentals.
+            </div>
+          </Typography>
+          <Typography
+            variant="headline"
+            color="primary"
+            className={classes.expStyle}
+          >
+            <div className="engineer">Sales Asscoiate</div>
+          </Typography>
+          <Typography
+            variant="title"
+            color="primary"
+            className={classes.expStyle}
+          >
+            <div className="lambda">Best Buy | November 2016 - Present</div>
+          </Typography>
+          <Typography color="primary" className={classes.expStyle}>
+            <div className="bullet1">
+              Home Theater/Computer sales associate with a team of 5+ people
+            </div>
+          </Typography>
+          <Typography color="primary" className={classes.expStyle}>
+            <div className="bullet2">
+              Required to hit a quota of sales each month both personal and
+              section wide.
+            </div>
+          </Typography>
+        </div>
+        <div className="border" />
+        <div className="bottomPage">
+          <Typography
+            variant="display3"
+            color="secondary"
+            className={classes.expStyle}
+          >
+            Skills
+          </Typography>
         </div>
       </div>
     );
