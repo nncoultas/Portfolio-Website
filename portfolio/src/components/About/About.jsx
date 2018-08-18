@@ -60,15 +60,6 @@ const styles = {
   skillsTitle: {
     textAlign: 'center'
   },
-  // languagesChip: {
-  //   marginLeft: 714,
-  //   marginTop: 23
-  // },
-  // chipList: {
-  //   marginTop: 32,
-  //   display: 'flex',
-  //   width: 85
-  // },
   chipList: {
     marginBottom: 32
   }
