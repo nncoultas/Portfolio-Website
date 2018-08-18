@@ -8,6 +8,8 @@ import { withStyles } from '@material-ui/core/styles';
 import GitHubIcon from './25231.svg';
 import LinkedInIcon from './61109.svg';
 import EmailIcon from './54215.svg';
+import PhoneIcon from './baseline-phone-24px.svg';
+import ResumeIcon from './resume.svg';
 
 const styles = {
   avatar: {
@@ -19,24 +21,53 @@ const styles = {
   },
   chipOne: {
     backgroundColor: 'white',
-    marginLeft: -39,
+    marginLeft: -78,
     marginTop: 90,
-    position: 'absolute'
+    position: 'absolute',
+    color: 'blue'
   },
   chipTwo: {
     backgroundColor: 'white',
-    marginLeft: 114,
+    marginLeft: 43,
     marginTop: 90,
-    position: 'absolute'
+    position: 'absolute',
+    color: 'blue'
   },
   chipThree: {
     backgroundColor: 'white',
-    marginLeft: 246,
+    marginLeft: 175,
     marginTop: 90,
-    position: 'absolute'
+    position: 'absolute',
+    color: 'blue'
+  },
+  chipFour: {
+    backgroundColor: 'white',
+    marginLeft: 287,
+    marginTop: 90,
+    position: 'absolute',
+    color: 'blue'
+  },
+  chipFive: {
+    backgroundColor: 'white',
+    marginLeft: 452,
+    marginTop: 90,
+    position: 'absolute',
+    color: 'blue'
   },
   expStyle: {
     textAlign: 'center'
+  },
+  skillsTitle: {
+    textAlign: 'center'
+  },
+  languagesChip: {
+    marginLeft: 714,
+    marginTop: 23
+  },
+  chipList: {
+    marginTop: 32,
+    display: 'flex',
+    width: 85
   }
 };
 class About extends React.Component {
@@ -51,6 +82,16 @@ class About extends React.Component {
       'My email address has been copied to your clipboard!';
   };
 
+  copyPhoneNumber = () => {
+    let phoneTextField = document.createElement('textarea');
+    phoneTextField.innerText = '775-636-2352';
+    document.body.appendChild(phoneTextField);
+    phoneTextField.select();
+    document.execCommand('copy');
+    phoneTextField.remove();
+    document.getElementById('phone').title =
+      'My phone number has been copied to your clipboard!';
+  };
   render() {
     const { classes } = this.props;
     return (
@@ -71,26 +112,52 @@ class About extends React.Component {
           </Typography>
           <Avatar src={HeadShot} className={classes.avatar} />
 
-          <a href={'http://github.com/nncoultas'} title="View My Github">
+          <a href={'http://github.com/nncoultas'} title="View my Github">
             <Chip
               avatar={<Avatar src={GitHubIcon} alt="GitHub Icon" />}
+              label="My Github"
               className={classes.chipOne}
+              clickable
             />
           </a>
           <a
             href={'https://www.linkedin.com/in/nick-coultas-a1491b167/'}
-            title="Connect With Me On LinkedIn"
+            title="Connect with me on LinkedIn"
           >
             <Chip
               avatar={<Avatar src={LinkedInIcon} alt="LinkedIn Icon" />}
               className={classes.chipTwo}
+              label="My LinkedIn"
+              clickable
             />
           </a>
-          <a title="Click The Icon To Copy My Email!" id="email">
+          <a title="Click the icon to copy my email!" id="email">
             <Chip
-              avatar={<Avatar src={EmailIcon} alt="EmailIcon Icon" />}
+              avatar={<Avatar src={EmailIcon} alt="Email Icon" />}
               className={classes.chipThree}
               onClick={this.copyEmail}
+              label="My email"
+            />
+          </a>
+          <a title="Click the icon to copy my phone number" id="phone">
+            <Chip
+              avatar={<Avatar src={PhoneIcon} alt="Phone Icon" />}
+              className={classes.chipFour}
+              onClick={this.copyPhoneNumber}
+              label="My phone number"
+            />
+          </a>
+          <a
+            href={
+              'https://drive.google.com/file/d/1dNkQB6wKUtt9R8msCymyLiUWZA9SsKd3/view'
+            }
+            title="Click the icon to view my resume"
+          >
+            <Chip
+              avatar={<Avatar src={ResumeIcon} alt="Resume Icon" />}
+              className={classes.chipFive}
+              label="My Resume"
+              clickable
             />
           </a>
         </div>
@@ -174,6 +241,42 @@ class About extends React.Component {
           >
             Skills
           </Typography>
+          <Typography
+            variant="headline"
+            color="Primary"
+            className={classes.skillsTitle}
+          >
+            <div className="languages">Languages</div>
+          </Typography>
+          <Typography
+            variant="headline"
+            color="Primary"
+            className={classes.skillsTitle}
+          >
+            <div className="backEnd">Back-End</div>
+          </Typography>
+          <Typography
+            variant="headline"
+            color="Primary"
+            className={classes.skillsTitle}
+          >
+            <div className="frontEnd">Front-End</div>
+          </Typography>
+          <Chip
+            label="Javascript"
+            color="primary"
+            className={classes.languagesChip}
+          />
+          <Chip
+            label="C"
+            color="primary"
+            className={`${classes.languagesChip} ${classes.chipList}`}
+          />
+          <Chip
+            label="Python"
+            color="primary"
+            className={`${classes.languagesChip} ${classes.chipList}`}
+          />
         </div>
       </div>
     );

@@ -40,7 +40,6 @@
 .middlePage {
   margin-bottom: -5%;
 }
-
 .engineer {
   margin-top: 2%;
 }
@@ -55,4 +54,15 @@
 }
 .bullet3 {
   padding-top: 0.5%;
+}
+.languages {
+  margin-right: 392px;
+}
+.backEnd {
+  position: absolute;
+  margin-left: 1106px;
+  margin-top: -32px;
+}
+.frontEnd {
+  margin-top: -32px;
 }
