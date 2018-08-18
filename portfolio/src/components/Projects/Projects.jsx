@@ -9,8 +9,9 @@ import Typography from '@material-ui/core/Typography';
 import LambdaNotes from './LambdaNotes.png';
 import BackwoodsPicture from './Backwoods.jpg';
 import PythonPicture from './Python.png';
+import './Projects.css';
 
-const styles = {
+const styles = theme => ({
   card: {
     borderRadius: 0,
     maxWidth: 462
@@ -20,20 +21,28 @@ const styles = {
     paddingTop: '56.25%'
   },
   lambdaCard: {
-    marginLeft: 1019,
-    marginTop: 68
+    marginLeft: 602,
+    marginTop: 68,
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 0
+    }
   },
   BackWoodsCard: {
+    marginTop: 68,
     position: 'absolute',
-    marginLeft: 461
+    marginLeft: -238,
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 0,
+      position: 'inherit'
+    }
   }
-};
+});
 
 class Projects extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
+      <div className="projectView">
         <Card className={`${classes.card}  ${classes.BackWoodsCard}`}>
           <CardMedia
             className={classes.media}
