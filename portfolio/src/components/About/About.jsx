@@ -12,6 +12,84 @@ import PhoneIcon from './baseline-phone-24px.svg';
 import ResumeIcon from './resume.svg';
 
 const styles = {
+  topPage: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: 1360,
+    height: 203,
+    justifyContent: 'center',
+    textAlign: 'center',
+    paddingTop: 78
+  },
+  middlePage: {
+    marginBottom: -91
+  },
+  aboutMe: {
+    width: 293,
+    marginLeft: 652,
+    fontSize: 71
+  },
+  jobTitle: {
+    opacity: 0.8,
+    marginLeft: 171,
+    marginTop: 2,
+    color: 'darkblue'
+  },
+  elevatorPitch: {
+    width: 528,
+    marginLeft: 536,
+    marginTop: 19,
+    fontSize: 17,
+    color: 'darkblue'
+  },
+  experienceTitle: {
+    marginTop: 37
+  },
+  experienceHeader: {
+    padding: 12
+  },
+  bulletPoints: {
+    paddingTop: 12
+  },
+  languages: {
+    marginRight: 392
+  },
+  backEnd: {
+    position: 'absolute',
+    marginLeft: 1106,
+    marginTop: -32
+  },
+  frontEnd: {
+    marginTop: -32
+  },
+  languagesSkills: {
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: 714,
+    marginTop: 11
+  },
+  frontEndSkills: {
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: 904,
+    marginTop: 11
+  },
+  backEndSkills: {
+    position: 'absolute',
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: 1112,
+    marginTop: 11
+  },
+  border: {
+    borderBottom: '1px solid gray',
+    marginTop: 162,
+    marginLeft: 390,
+    opacity: 0.3,
+    width: 1061
+  },
   avatar: {
     width: 217,
     height: 287,
@@ -90,19 +168,25 @@ class About extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <div className="topPage">
-          <Typography variant="display3" color="secondary">
-            <div className="aboutMe">About Me</div>
+        <Typography className={classes.topPage}>
+          <Typography
+            variant="display3"
+            color="secondary"
+            className={classes.aboutMe}
+          >
+            About Me
           </Typography>
-          <Typography variant="headline" color="primary">
-            <div className="jobTitle">Software Engineer from Reno, Nevada</div>
+          <Typography
+            variant="headline"
+            color="primary"
+            className={classes.jobTitle}
+          >
+            Software Engineer from Reno, Nevada
           </Typography>
-          <Typography color="primary">
-            <div className="elevatorPitch">
-              My Passion has always been working with computers. While I've had
-              an interest in the hardware side of things my real Passion is the
-              software side of things and creating web applications.
-            </div>
+          <Typography color="primary" className={classes.elevatorPitch}>
+            My Passion has always been working with computers. While I've had an
+            interest in the hardware side of things my real Passion is the
+            software side of things and creating web applications.
           </Typography>
           <Avatar src={HeadShot} className={classes.avatar} />
 
@@ -154,9 +238,9 @@ class About extends React.Component {
               clickable
             />
           </a>
-        </div>
-        <div className="border" />
-        <div className="middlePage">
+        </Typography>
+        <Typography className={classes.border} />
+        <Typography className={classes.middlePage}>
           <Typography
             variant="display3"
             color="secondary"
@@ -167,67 +251,70 @@ class About extends React.Component {
           <Typography
             variant="headline"
             color="primary"
-            className={classes.expStyle}
+            className={`${classes.expStyle} ${classes.experienceTitle}`}
           >
-            <div className="engineer">Software Engineer</div>
+            Software Engineer
           </Typography>
           <Typography
             variant="title"
             color="primary"
-            className={classes.expStyle}
+            className={`${classes.expStyle} ${classes.experienceHeader}`}
           >
-            <div className="lambda">
-              Lambda School | February 2018 - August 2018
-            </div>
+            Lambda School | February 2018 - August 2018
           </Typography>
-          <Typography color="primary" className={classes.expStyle}>
-            <div className="bullet1">
-              6+ months Full-Time CS Fundamental/software development program
-            </div>
+          <Typography
+            color="primary"
+            className={`${classes.expStyle} ${classes.bulletPoints}`}
+          >
+            6+ months Full-Time CS Fundamental/software development program
           </Typography>
-          <Typography color="primary" className={classes.expStyle}>
-            <div className="bullet2">
-              Gained experience working with clients and understanding client
-              demands by <br /> collaborating on full lifecycle projects.{' '}
-            </div>
+          <Typography
+            color="primary"
+            className={`${classes.expStyle} ${classes.bulletPoints}`}
+          >
+            Gained experience working with clients and understanding client
+            demands by <br /> collaborating on full lifecycle projects.{' '}
           </Typography>
-          <Typography color="primary" className={classes.expStyle}>
-            <div className="bullet3">
-              Completed all curriculum coursework including; <br /> React, react
-              native, redux, node, express, mongoDB, mocha, chai, python,
-              django. <br />
-              Hands on experience with client and server testing, paired
-              programming, and CS fundamentals.
-            </div>
+          <Typography
+            color="primary"
+            className={`${classes.expStyle} ${classes.bulletPoints}`}
+          >
+            Completed all curriculum coursework including; <br /> React, react
+            native, redux, node, express, mongoDB, mocha, chai, python, django.{' '}
+            <br />
+            Hands on experience with client and server testing, paired
+            programming, and CS fundamentals.
           </Typography>
           <Typography
             variant="headline"
             color="primary"
-            className={classes.expStyle}
+            className={`${classes.expStyle} ${classes.experienceTitle}`}
           >
-            <div className="engineer">Sales Asscoiate</div>
+            Sales Asscoiate
           </Typography>
           <Typography
             variant="title"
             color="primary"
-            className={classes.expStyle}
+            className={`${classes.expStyle} ${classes.experienceHeader}`}
           >
-            <div className="lambda">Best Buy | November 2016 - Present</div>
+            Best Buy | November 2016 - Present
           </Typography>
-          <Typography color="primary" className={classes.expStyle}>
-            <div className="bullet1">
-              Home Theater/Computer sales associate with a team of 5+ people
-            </div>
+          <Typography
+            color="primary"
+            className={`${classes.expStyle} ${classes.bulletPoints}`}
+          >
+            Home Theater/Computer sales associate with a team of 5+ people
           </Typography>
-          <Typography color="primary" className={classes.expStyle}>
-            <div className="bullet2">
-              Required to hit a quota of sales each month both personal and
-              section wide.
-            </div>
+          <Typography
+            color="primary"
+            className={`${classes.expStyle} ${classes.bulletPoints}`}
+          >
+            Required to hit a quota of sales each month both personal and
+            section wide.
           </Typography>
-        </div>
-        <div className="border" />
-        <div className="bottomPage">
+        </Typography>
+        <Typography className={classes.border} />
+        <Typography className="bottomPage">
           <Typography
             variant="display3"
             color="secondary"
@@ -238,25 +325,25 @@ class About extends React.Component {
           <Typography
             variant="headline"
             color="Primary"
-            className={classes.skillsTitle}
+            className={`${classes.skillsTitle} ${classes.languages}`}
           >
-            <div className="languages">Languages</div>
+            Languages
           </Typography>
           <Typography
             variant="headline"
             color="Primary"
-            className={classes.skillsTitle}
+            className={`${classes.skillsTitle} ${classes.backEnd}`}
           >
-            <div className="backEnd">Back-End</div>
+            Back-End
           </Typography>
           <Typography
             variant="headline"
             color="Primary"
-            className={classes.skillsTitle}
+            className={`${classes.skillsTitle} ${classes.frontEnd}`}
           >
-            <div className="frontEnd">Front-End</div>
+            Front-End
           </Typography>
-          <div className="languagesSkills">
+          <Typography className={classes.languagesSkills}>
             <Chip
               label="Javascript"
               color="primary"
@@ -264,8 +351,8 @@ class About extends React.Component {
             />
             <Chip label="C" color="primary" className={classes.chipList} />
             <Chip label="Python" color="primary" className={classes.chipList} />
-          </div>
-          <div className="frontEndSkills">
+          </Typography>
+          <Typography className={classes.frontEndSkills}>
             <Chip label="React" color="primary" className={classes.chipList} />
             <Chip
               label="React-Router"
@@ -295,8 +382,8 @@ class About extends React.Component {
               className={classes.chipList}
             />
             <Chip label="Axios" color="primary" className={classes.chipList} />
-          </div>
-          <div className="backEndSkills">
+          </Typography>
+          <Typography className={classes.backEndSkills}>
             <Chip
               label="MongoDB"
               color="primary"
@@ -325,8 +412,8 @@ class About extends React.Component {
             <Chip label="Django" color="primary" className={classes.chipList} />
             <Chip label="JWT" color="primary" className={classes.chipList} />
             <Chip label="Bcrypt" color="primary" className={classes.chipList} />
-          </div>
-        </div>
+          </Typography>
+        </Typography>
       </div>
     );
   }
