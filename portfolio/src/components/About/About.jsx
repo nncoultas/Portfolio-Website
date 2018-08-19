@@ -69,70 +69,31 @@ const styles = theme => ({
   bulletPoints: {
     paddingTop: 12
   },
-  languages: {
-    marginRight: '21%',
-    [theme.breakpoints.down('sm')]: {
-      marginRight: '0%',
-      marginBottom: '67%',
-      display: 'flex',
-      flexDirection: 'column'
-    }
-  },
-  backEnd: {
-    marginLeft: '21%',
-    marginTop: '-1.6%',
-    [theme.breakpoints.down('sm')]: {
-      marginLeft: '0%',
-      display: 'flex',
-      flexDirection: 'column',
-      marginBottom: '169%'
-    }
-  },
-  frontEnd: {
-    marginTop: '-1.8%',
-    [theme.breakpoints.down('sm')]: {
-      display: 'flex',
-      flexDirection: 'column',
-      marginBottom: '132%'
-    }
-  },
   languagesSkills: {
     position: 'absolute',
-    width: '6%',
-    display: 'flex',
-    flexDirection: 'column',
-    marginLeft: '36.5%',
+    marginLeft: '37.4%',
     marginTop: '1%',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '39%',
-      width: '21%',
-      marginTop: '-380%'
+      marginLeft: '33%',
+      marginTop: '-328%'
     }
   },
   frontEndSkills: {
     position: 'absolute',
-    width: '6%',
-    display: 'flex',
-    flexDirection: 'column',
     marginLeft: '47%',
     marginTop: '1%',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '39%',
-      width: '21%',
-      marginTop: '-129%'
+      marginLeft: '33%',
+      marginTop: '-245%'
     }
   },
   backEndSkills: {
     position: 'absolute',
-    width: '6%',
-    display: 'flex',
-    flexDirection: 'column',
     marginLeft: '57.5%',
     marginTop: '1%',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '39%',
-      width: '21%',
-      marginTop: '-303%'
+      marginLeft: '33%',
+      marginTop: '2%'
     }
   },
   border: {
@@ -149,87 +110,69 @@ const styles = theme => ({
     }
   },
   avatar: {
-    width: '11%',
+    width: '18%',
     height: '28%',
     borderRadius: 32,
-    position: 'absolute',
-    marginLeft: '55%',
+    marginLeft: '105%',
+    marginTop: '-22%',
     [theme.breakpoints.down('sm')]: {
-      position: 'inherit',
       marginLeft: '50%',
       marginTop: '5%',
       width: '51%',
       height: '33%'
     }
   },
-  chipOne: {
-    backgroundColor: 'white',
-    marginLeft: '4%',
-    marginTop: '5%',
-    position: 'absolute',
-    color: 'blue',
+
+  chipIcons: {
+    marginTop: '4%',
+    display: 'flex',
+    justifyContent: 'center',
+    marginLeft: '86%',
     [theme.breakpoints.down('sm')]: {
-      position: 'inherit',
-      marginTop: '5%',
-      marginLeft: '52%'
+      flexDirection: 'column',
+      marginLeft: '53%',
+      width: '15%'
     }
   },
-  chipTwo: {
+  chipStyle: {
     backgroundColor: 'white',
-    marginLeft: '10%',
-    marginTop: '5%',
-    position: 'absolute',
-    color: 'blue',
-    [theme.breakpoints.down('sm')]: {
-      position: 'inherit',
-      marginTop: '5%',
-      marginLeft: '54%'
-    }
-  },
-  chipThree: {
-    backgroundColor: 'white',
-    marginLeft: '17%',
-    marginTop: '5%',
-    position: 'absolute',
-    color: 'blue',
-    [theme.breakpoints.down('sm')]: {
-      position: 'inherit',
-      marginTop: '5%',
-      marginLeft: '49%'
-    }
-  },
-  chipFour: {
-    backgroundColor: 'white',
-    marginLeft: '23%',
-    marginTop: '5%',
-    position: 'absolute',
-    color: 'blue',
-    [theme.breakpoints.down('sm')]: {
-      position: 'inherit',
-      marginTop: '5%',
-      marginLeft: '55%'
-    }
-  },
-  chipFive: {
-    backgroundColor: 'white',
-    marginLeft: '32%',
-    marginTop: '5%',
-    position: 'absolute',
-    color: 'blue',
-    [theme.breakpoints.down('sm')]: {
-      position: 'inherit',
-      marginTop: '5%',
-      marginLeft: '55%'
-    }
+    color: 'blue'
   },
   expStyle: {
     textAlign: 'center'
   },
   skillsTitle: {
-    textAlign: 'center'
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    width: '34%',
+    marginLeft: '33%',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      alignItems: 'center',
+      width: '41%',
+      marginLeft: '29%'
+    }
   },
   chipList: {
     marginBottom: 32
+  },
+  frontEndTitle: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '194%'
+    }
+  },
+  backEndTitle: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '594%'
+    }
+  },
+  skillsStyled: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '6%',
+    [theme.breakpoints.down('sm')]: {
+      width: '33%'
+    }
   }
 });
 class About extends React.Component {
@@ -279,55 +222,62 @@ class About extends React.Component {
             software side of things and creating web applications.
           </Typography>
           <Avatar src={HeadShot} className={classes.avatar} />
-
-          <a href={'http://github.com/nncoultas'} title="View my Github">
-            <Chip
-              avatar={<Avatar src={GitHubIcon} alt="GitHub Icon" />}
-              label="My Github"
-              className={classes.chipOne}
-              clickable
-            />
-          </a>
-          <a
-            href={'https://www.linkedin.com/in/nick-coultas-a1491b167/'}
-            title="Connect with me on LinkedIn"
-          >
-            <Chip
-              avatar={<Avatar src={LinkedInIcon} alt="LinkedIn Icon" />}
-              className={classes.chipTwo}
-              label="My LinkedIn"
-              clickable
-            />
-          </a>
-          <a title="Click the icon to copy my email!" id="email">
-            <Chip
-              avatar={<Avatar src={EmailIcon} alt="Email Icon" />}
-              className={classes.chipThree}
-              onClick={this.copyEmail}
-              label="My email"
-            />
-          </a>
-          <a title="Click the icon to copy my phone number" id="phone">
-            <Chip
-              avatar={<Avatar src={PhoneIcon} alt="Phone Icon" />}
-              className={classes.chipFour}
-              onClick={this.copyPhoneNumber}
-              label="My phone number"
-            />
-          </a>
-          <a
-            href={
-              'https://drive.google.com/file/d/1dNkQB6wKUtt9R8msCymyLiUWZA9SsKd3/view'
-            }
-            title="Click the icon to view my resume"
-          >
-            <Chip
-              avatar={<Avatar src={ResumeIcon} alt="Resume Icon" />}
-              className={classes.chipFive}
-              label="My Resume"
-              clickable
-            />
-          </a>
+          <Typography className={classes.chipIcons}>
+            <a
+              href={'http://github.com/nncoultas'}
+              title="View my Github"
+              style={{ textDecoration: 'none' }}
+            >
+              <Chip
+                avatar={<Avatar src={GitHubIcon} alt="GitHub Icon" />}
+                label="My Github"
+                className={classes.chipStyle}
+                clickable
+              />
+            </a>
+            <a
+              href={'https://www.linkedin.com/in/nick-coultas-a1491b167/'}
+              title="Connect with me on LinkedIn"
+              style={{ textDecoration: 'none' }}
+            >
+              <Chip
+                avatar={<Avatar src={LinkedInIcon} alt="LinkedIn Icon" />}
+                className={classes.chipStyle}
+                label="My LinkedIn"
+                clickable
+              />
+            </a>
+            <a title="Click the icon to copy my email!" id="email">
+              <Chip
+                avatar={<Avatar src={EmailIcon} alt="Email Icon" />}
+                className={classes.chipStyle}
+                onClick={this.copyEmail}
+                label="My email"
+              />
+            </a>
+            <a title="Click the icon to copy my phone number" id="phone">
+              <Chip
+                avatar={<Avatar src={PhoneIcon} alt="Phone Icon" />}
+                className={classes.chipStyle}
+                onClick={this.copyPhoneNumber}
+                label="My phone number"
+              />
+            </a>
+            <a
+              href={
+                'https://drive.google.com/file/d/1dNkQB6wKUtt9R8msCymyLiUWZA9SsKd3/view'
+              }
+              title="Click the icon to view my resume"
+              style={{ textDecoration: 'none' }}
+            >
+              <Chip
+                avatar={<Avatar src={ResumeIcon} alt="Resume Icon" />}
+                className={classes.chipStyle}
+                label="My Resume"
+                clickable
+              />
+            </a>
+          </Typography>
         </Typography>
         <Typography className={classes.border} />
         <Typography className={classes.middlePage}>
@@ -412,96 +362,126 @@ class About extends React.Component {
           >
             Skills
           </Typography>
-          <Typography
-            variant="headline"
-            color="Primary"
-            className={`${classes.skillsTitle} ${classes.languages}`}
-          >
-            Languages
+          <Typography className={classes.skillsTitle}>
+            <Typography variant="headline" color="Primary">
+              Languages
+            </Typography>
+            <Typography
+              variant="headline"
+              color="Primary"
+              className={classes.frontEndTitle}
+            >
+              Front-End
+            </Typography>
+            <Typography
+              variant="headline"
+              color="Primary"
+              className={classes.backEndTitle}
+            >
+              Back-End
+            </Typography>
           </Typography>
-          <Typography
-            variant="headline"
-            color="Primary"
-            className={`${classes.skillsTitle} ${classes.backEnd}`}
-          >
-            Back-End
-          </Typography>
-          <Typography
-            variant="headline"
-            color="Primary"
-            className={`${classes.skillsTitle} ${classes.frontEnd}`}
-          >
-            Front-End
-          </Typography>
-          <Typography className={classes.languagesSkills}>
-            <Chip
-              label="Javascript"
-              color="primary"
-              className={classes.chipList}
-            />
-            <Chip label="C" color="primary" className={classes.chipList} />
-            <Chip label="Python" color="primary" className={classes.chipList} />
-          </Typography>
-          <Typography className={classes.frontEndSkills}>
-            <Chip label="React" color="primary" className={classes.chipList} />
-            <Chip
-              label="React-Router"
-              color="primary"
-              className={classes.chipList}
-            />
-            <Chip label="Redux" color="primary" className={classes.chipList} />
-            <Chip
-              label="Bootstrap"
-              color="primary"
-              className={classes.chipList}
-            />
-            <Chip
-              label="Material-UI"
-              color="primary"
-              className={classes.chipList}
-            />
-            <Chip
-              label="HTML/CSS"
-              color="primary"
-              className={classes.chipList}
-            />
-            <Chip label="LESS" color="primary" className={classes.chipList} />
-            <Chip
-              label="HTTP/AJAX"
-              color="primary"
-              className={classes.chipList}
-            />
-            <Chip label="Axios" color="primary" className={classes.chipList} />
-          </Typography>
-          <Typography className={classes.backEndSkills}>
-            <Chip
-              label="MongoDB"
-              color="primary"
-              className={classes.chipList}
-            />
-            <Chip
-              label="PostgreSQL"
-              color="primary"
-              className={classes.chipList}
-            />
-            <Chip
-              label="Sequelize"
-              color="primary"
-              className={classes.chipList}
-            />
-            <Chip
-              label="Node.js"
-              color="primary"
-              className={classes.chipList}
-            />
-            <Chip
-              label="Express.js"
-              color="primary"
-              className={classes.chipList}
-            />
-            <Chip label="Django" color="primary" className={classes.chipList} />
-            <Chip label="JWT" color="primary" className={classes.chipList} />
-            <Chip label="Bcrypt" color="primary" className={classes.chipList} />
+          <Typography className={classes.skillsStyled}>
+            <Typography
+              className={`${classes.skillsStyled} ${classes.languagesSkills}`}
+            >
+              <Chip
+                label="Javascript"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip label="C" color="primary" className={classes.chipList} />
+              <Chip
+                label="Python"
+                color="primary"
+                className={classes.chipList}
+              />
+            </Typography>
+            <Typography
+              className={`${classes.skillsStyled} ${classes.frontEndSkills}`}
+            >
+              <Chip
+                label="React"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip
+                label="React-Router"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip
+                label="Redux"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip
+                label="Bootstrap"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip
+                label="Material-UI"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip
+                label="HTML/CSS"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip label="LESS" color="primary" className={classes.chipList} />
+              <Chip
+                label="HTTP/AJAX"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip
+                label="Axios"
+                color="primary"
+                className={classes.chipList}
+              />
+            </Typography>
+            <Typography
+              className={`${classes.skillsStyled} ${classes.backEndSkills}`}
+            >
+              <Chip
+                label="MongoDB"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip
+                label="PostgreSQL"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip
+                label="Sequelize"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip
+                label="Node.js"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip
+                label="Express.js"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip
+                label="Django"
+                color="primary"
+                className={classes.chipList}
+              />
+              <Chip label="JWT" color="primary" className={classes.chipList} />
+              <Chip
+                label="Bcrypt"
+                color="primary"
+                className={classes.chipList}
+              />
+            </Typography>
           </Typography>
         </Typography>
       </div>
