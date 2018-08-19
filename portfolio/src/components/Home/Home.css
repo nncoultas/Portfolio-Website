@@ -30,3 +30,9 @@
   color: white;
   text-shadow: 0 0 4px #000;
 }
+@media (max-width: 479px) {
+  .header {
+    width: 100%;
+    padding-top: 20%;
+  }
+}

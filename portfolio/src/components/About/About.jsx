@@ -10,7 +10,7 @@ import EmailIcon from './54215.svg';
 import PhoneIcon from './baseline-phone-24px.svg';
 import ResumeIcon from './resume.svg';
 
-const styles = {
+const styles = theme => ({
   topPage: {
     display: 'flex',
     flexDirection: 'column',
@@ -18,28 +18,46 @@ const styles = {
     height: 203,
     justifyContent: 'center',
     textAlign: 'center',
-    paddingTop: 78
+    paddingTop: 78,
+    [theme.breakpoints.down('sm')]: {
+      width: '68%',
+      height: '100%'
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '53%',
+      height: '100%'
+    }
   },
   middlePage: {
     marginBottom: -91
   },
   aboutMe: {
-    width: 293,
-    marginLeft: 652,
-    fontSize: 71
+    marginLeft: '55%',
+    fontSize: 71,
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '23%',
+      width: '100%'
+    }
   },
   jobTitle: {
-    opacity: 0.8,
-    marginLeft: 171,
-    marginTop: 2,
-    color: 'darkblue'
+    opacity: 0.6,
+    marginLeft: '51%',
+    marginTop: '.5%',
+    color: 'darkblue',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      marginLeft: '23%'
+    }
   },
   elevatorPitch: {
-    width: 528,
-    marginLeft: 536,
-    marginTop: 19,
+    marginLeft: '51%',
+    marginTop: '2%',
     fontSize: 17,
-    color: 'darkblue'
+    color: 'darkblue',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '9%',
+      width: '134%'
+    }
   },
   experienceTitle: {
     marginTop: 37
@@ -54,82 +72,137 @@ const styles = {
     marginRight: 392
   },
   backEnd: {
-    position: 'absolute',
-    marginLeft: 1106,
-    marginTop: -32
+    marginLeft: '21%',
+    marginTop: -32,
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 347
+    }
   },
   frontEnd: {
     marginTop: -32
   },
   languagesSkills: {
     position: 'absolute',
+    width: '6%',
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 714,
-    marginTop: 11
+    marginLeft: '36.5%',
+    marginTop: '1%',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '3%',
+      width: '21%'
+    }
   },
   frontEndSkills: {
     position: 'absolute',
+    width: '6%',
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 904,
-    marginTop: 11
+    marginLeft: '47%',
+    marginTop: '1%',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '39%',
+      width: '21%'
+    }
   },
   backEndSkills: {
     position: 'absolute',
+    width: '6%',
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 1112,
-    marginTop: 11
+    marginLeft: '57.5%',
+    marginTop: '1%',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '77%',
+      width: '21%'
+    }
   },
   border: {
     borderBottom: '1px solid gray',
     marginTop: 162,
     marginLeft: 390,
     opacity: 0.3,
-    width: 1061
+    width: '100%',
+    marginBottom: 19,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      marginTop: 193,
+      marginLeft: -17
+    }
   },
   avatar: {
-    width: 217,
-    height: 287,
+    width: '11%',
+    height: '28%',
     borderRadius: 32,
     position: 'absolute',
-    marginLeft: 1073
+    marginLeft: '55%',
+    [theme.breakpoints.down('sm')]: {
+      position: 'inherit',
+      marginLeft: '50%',
+      marginTop: '5%',
+      width: '51%',
+      height: '33%'
+    }
   },
   chipOne: {
     backgroundColor: 'white',
-    marginLeft: -78,
-    marginTop: 90,
+    marginLeft: '4%',
+    marginTop: '5%',
     position: 'absolute',
-    color: 'blue'
+    color: 'blue',
+    [theme.breakpoints.down('sm')]: {
+      position: 'none',
+      marginTop: '5%',
+      marginLeft: '-23%'
+    }
   },
   chipTwo: {
     backgroundColor: 'white',
-    marginLeft: 43,
-    marginTop: 90,
+    marginLeft: '10%',
+    marginTop: '5%',
     position: 'absolute',
-    color: 'blue'
+    color: 'blue',
+    [theme.breakpoints.down('sm')]: {
+      position: 'none',
+      marginTop: '5%',
+      marginLeft: '5%'
+    }
   },
   chipThree: {
     backgroundColor: 'white',
-    marginLeft: 175,
-    marginTop: 90,
+    marginLeft: '17%',
+    marginTop: '5%',
     position: 'absolute',
-    color: 'blue'
+    color: 'blue',
+    [theme.breakpoints.down('sm')]: {
+      position: 'none',
+      marginTop: '5%',
+      marginLeft: '34%'
+    }
   },
   chipFour: {
     backgroundColor: 'white',
-    marginLeft: 287,
-    marginTop: 90,
+    marginLeft: '23%',
+    marginTop: '5%',
     position: 'absolute',
-    color: 'blue'
+    color: 'blue',
+    [theme.breakpoints.down('sm')]: {
+      position: 'none',
+      marginLeft: '-12%',
+      marginTop: '18%'
+    }
   },
   chipFive: {
     backgroundColor: 'white',
-    marginLeft: 452,
-    marginTop: 90,
+    marginLeft: '32%',
+    marginTop: '5%',
     position: 'absolute',
-    color: 'blue'
+    color: 'blue',
+    [theme.breakpoints.down('sm')]: {
+      position: 'none',
+      marginLeft: '25%',
+      marginTop: '18%'
+    }
   },
   expStyle: {
     textAlign: 'center'
@@ -140,7 +213,7 @@ const styles = {
   chipList: {
     marginBottom: 32
   }
-};
+});
 class About extends React.Component {
   copyEmail = () => {
     let textField = document.createElement('textarea');
