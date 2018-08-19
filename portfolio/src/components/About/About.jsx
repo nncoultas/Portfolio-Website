@@ -183,7 +183,7 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       position: 'inherit',
       marginTop: '5%',
-      marginLeft: '52%'
+      marginLeft: '54%'
     }
   },
   chipThree: {
@@ -195,7 +195,7 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       position: 'inherit',
       marginTop: '5%',
-      marginLeft: '52%'
+      marginLeft: '49%'
     }
   },
   chipFour: {
@@ -207,7 +207,7 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       position: 'inherit',
       marginTop: '5%',
-      marginLeft: '52%'
+      marginLeft: '55%'
     }
   },
   chipFive: {
@@ -219,7 +219,7 @@ const styles = theme => ({
     [theme.breakpoints.down('sm')]: {
       position: 'inherit',
       marginTop: '5%',
-      marginLeft: '52%'
+      marginLeft: '55%'
     }
   },
   expStyle: {
