@@ -1,5 +1,4 @@
 import React from 'react';
-import './About.css';
 import HeadShot from './image1.jpeg';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
