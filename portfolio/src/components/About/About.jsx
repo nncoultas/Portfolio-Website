@@ -36,7 +36,8 @@ const styles = theme => ({
     fontSize: 71,
     [theme.breakpoints.down('sm')]: {
       marginLeft: '23%',
-      width: '100%'
+      width: '113%',
+      fontSize: 54
     }
   },
   jobTitle: {
@@ -69,17 +70,31 @@ const styles = theme => ({
     paddingTop: 12
   },
   languages: {
-    marginRight: 392
+    marginRight: '21%',
+    [theme.breakpoints.down('sm')]: {
+      marginRight: '0%',
+      marginBottom: '67%',
+      display: 'flex',
+      flexDirection: 'column'
+    }
   },
   backEnd: {
     marginLeft: '21%',
-    marginTop: -32,
+    marginTop: '-1.6%',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: 347
+      marginLeft: '0%',
+      display: 'flex',
+      flexDirection: 'column',
+      marginBottom: '169%'
     }
   },
   frontEnd: {
-    marginTop: -32
+    marginTop: '-1.8%',
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column',
+      marginBottom: '132%'
+    }
   },
   languagesSkills: {
     position: 'absolute',
@@ -89,8 +104,9 @@ const styles = theme => ({
     marginLeft: '36.5%',
     marginTop: '1%',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '3%',
-      width: '21%'
+      marginLeft: '39%',
+      width: '21%',
+      marginTop: '-380%'
     }
   },
   frontEndSkills: {
@@ -102,7 +118,8 @@ const styles = theme => ({
     marginTop: '1%',
     [theme.breakpoints.down('sm')]: {
       marginLeft: '39%',
-      width: '21%'
+      width: '21%',
+      marginTop: '-129%'
     }
   },
   backEndSkills: {
@@ -113,8 +130,9 @@ const styles = theme => ({
     marginLeft: '57.5%',
     marginTop: '1%',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '77%',
-      width: '21%'
+      marginLeft: '39%',
+      width: '21%',
+      marginTop: '-303%'
     }
   },
   border: {
@@ -126,7 +144,7 @@ const styles = theme => ({
     marginBottom: 19,
     [theme.breakpoints.down('sm')]: {
       width: '100%',
-      marginTop: 193,
+      marginTop: '39%',
       marginLeft: -17
     }
   },
@@ -151,9 +169,9 @@ const styles = theme => ({
     position: 'absolute',
     color: 'blue',
     [theme.breakpoints.down('sm')]: {
-      position: 'none',
+      position: 'inherit',
       marginTop: '5%',
-      marginLeft: '-23%'
+      marginLeft: '52%'
     }
   },
   chipTwo: {
@@ -163,9 +181,9 @@ const styles = theme => ({
     position: 'absolute',
     color: 'blue',
     [theme.breakpoints.down('sm')]: {
-      position: 'none',
+      position: 'inherit',
       marginTop: '5%',
-      marginLeft: '5%'
+      marginLeft: '52%'
     }
   },
   chipThree: {
@@ -175,9 +193,9 @@ const styles = theme => ({
     position: 'absolute',
     color: 'blue',
     [theme.breakpoints.down('sm')]: {
-      position: 'none',
+      position: 'inherit',
       marginTop: '5%',
-      marginLeft: '34%'
+      marginLeft: '52%'
     }
   },
   chipFour: {
@@ -187,9 +205,9 @@ const styles = theme => ({
     position: 'absolute',
     color: 'blue',
     [theme.breakpoints.down('sm')]: {
-      position: 'none',
-      marginLeft: '-12%',
-      marginTop: '18%'
+      position: 'inherit',
+      marginTop: '5%',
+      marginLeft: '52%'
     }
   },
   chipFive: {
@@ -199,9 +217,9 @@ const styles = theme => ({
     position: 'absolute',
     color: 'blue',
     [theme.breakpoints.down('sm')]: {
-      position: 'none',
-      marginLeft: '25%',
-      marginTop: '18%'
+      position: 'inherit',
+      marginTop: '5%',
+      marginLeft: '52%'
     }
   },
   expStyle: {
