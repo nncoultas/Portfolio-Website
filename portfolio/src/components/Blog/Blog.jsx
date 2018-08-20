@@ -32,10 +32,15 @@ class Blog extends React.Component {
             title="macbook"
           />
           <CardContent>
-            <Typography gutterBottom variant="headline" component="h2">
+            <Typography
+              gutterBottom
+              variant="headline"
+              component="h2"
+              color="secondary"
+            >
               5 Ways A Coding Academy Teaches You How To Be A Programmer
             </Typography>
-            <Typography component="p">
+            <Typography component="p" color="primary">
               Background My name is Nick Coultas and I currently reside in Reno,
               Nevada. There is a very small community here as far as
               Programmers/Developers go. I soon realized this when I started....
@@ -48,7 +53,7 @@ class Blog extends React.Component {
               }
               style={{ textDecoration: 'none' }}
             >
-              <Button size="small" color="primary">
+              <Button size="small" color="secondary">
                 Read More
               </Button>
             </a>

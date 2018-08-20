@@ -110,11 +110,11 @@ const styles = theme => ({
     }
   },
   avatar: {
-    width: '18%',
-    height: '28%',
+    width: '24%',
+    height: '43%',
     borderRadius: 32,
     marginLeft: '105%',
-    marginTop: '-22%',
+    marginTop: '-34%',
     [theme.breakpoints.down('sm')]: {
       marginLeft: '50%',
       marginTop: '5%',
@@ -217,9 +217,14 @@ class About extends React.Component {
             Software Engineer from Reno, Nevada
           </Typography>
           <Typography color="primary" className={classes.elevatorPitch}>
-            My Passion has always been working with computers. While I've had an
-            interest in the hardware side of things my real Passion is the
-            software side of things and creating web applications.
+            My passion has been computers so I worled as a Sales Associate at
+            Best Buy with a team of 5+ people to hit personal quotas. I've
+            always taken interest in software engineering and the deeper I dove
+            into it, made it clear this was my dream job and I soon realized
+            dedicating myself to lambda school would make that a reality. With
+            my constant experience working in teams both with code and without
+            and my hard work and dedication to meet deadlines I plan on making a
+            positive impact in production and any work environment.
           </Typography>
           <Avatar src={HeadShot} className={classes.avatar} />
           <Typography className={classes.chipIcons}>
