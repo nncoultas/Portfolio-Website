@@ -217,7 +217,7 @@ class About extends React.Component {
             Software Engineer from Reno, Nevada
           </Typography>
           <Typography color="primary" className={classes.elevatorPitch}>
-            My passion has been computers so I worled as a Sales Associate at
+            My passion has been computers so I worked as a Sales Associate at
             Best Buy with a team of 5+ people to hit personal quotas. I've
             always taken interest in software engineering and the deeper I dove
             into it, made it clear this was my dream job and I soon realized
