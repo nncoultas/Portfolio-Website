@@ -257,7 +257,7 @@ class About extends React.Component {
                 avatar={<Avatar src={EmailIcon} alt="Email Icon" />}
                 className={classes.chipStyle}
                 onClick={this.copyEmail}
-                label="My email"
+                label="Copy my email address"
               />
             </a>
             <a title="Click the icon to copy my phone number" id="phone">
@@ -265,7 +265,7 @@ class About extends React.Component {
                 avatar={<Avatar src={PhoneIcon} alt="Phone Icon" />}
                 className={classes.chipStyle}
                 onClick={this.copyPhoneNumber}
-                label="My phone number"
+                label="Copy my phone number"
               />
             </a>
             <a
