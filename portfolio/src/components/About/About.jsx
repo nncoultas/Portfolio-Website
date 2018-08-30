@@ -217,14 +217,18 @@ class About extends React.Component {
             Software Engineer from Reno, Nevada
           </Typography>
           <Typography color="primary" className={classes.elevatorPitch}>
-            My passion has been computers so I worked as a Sales Associate at
-            Best Buy with a team of 5+ people to hit personal quotas. I've
-            always taken interest in software engineering and the deeper I dove
-            into it, made it clear this was my dream job and I soon realized
-            dedicating myself to lambda school would make that a reality. With
-            my constant experience working in teams both with code and without
-            and my hard work and dedication to meet deadlines I plan on making a
-            positive impact in production and any work environment.
+            My passion in life has always been technology. I started from the
+            ground up exploring every avenue I could where I could learn about
+            computers and software. I took a position with Best Buy as a Sales
+            associate so I could dive into hardware and support (the roots of
+            technology). At that point in my life I was still eager to learn
+            more and take a deeper dive into software engineering. I found an
+            intense and immersive program through Lambda School where I learned
+            Javascript, React, Redux, HTML/CSS, HTTP/AJAX, Node.js, and
+            Express.js. With my experience working on teams from a technical and
+            non technical standpoint, I believe I could utilize my soft skills
+            and technical skills to be part of a productice development team,
+            creating meaningful code and projects.
           </Typography>
           <Avatar src={HeadShot} className={classes.avatar} />
           <Typography className={classes.chipIcons}>
