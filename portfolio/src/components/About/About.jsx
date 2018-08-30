@@ -274,7 +274,7 @@ class About extends React.Component {
             </a>
             <a
               href={
-                'https://drive.google.com/file/d/1dNkQB6wKUtt9R8msCymyLiUWZA9SsKd3/view'
+                'https://drive.google.com/file/d/1WqUydLNgRudNzbpIFAwRrPFhR2IQBTn-/view'
               }
               title="Click the icon to view my resume"
               style={{ textDecoration: 'none' }}
