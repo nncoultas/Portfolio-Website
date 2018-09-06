@@ -124,8 +124,8 @@ class Projects extends React.Component {
               obtain the weather for the current day and four days after. <br />
               This Application also uses the Map Quest Geocoding API to get the
               location that is entered into the search bar. <br />
-              Tech Stack: React, React-Redux, Material-UI, Axios, Moment, and
-              Prop-types.
+              Tech Stack: React, React-Redux, Material-UI, Axios, Moment,
+              Prop-types, Netlify
             </Typography>
           </CardContent>
           <CardActions>
