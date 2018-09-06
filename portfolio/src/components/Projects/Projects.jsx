@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import LambdaNotes from './LambdaNotes.png';
 import BackwoodsPicture from './Backwoods.jpg';
 import PythonPicture from './Python.png';
+import WeatherAppPicture from './WeatherApp.png';
 import './Projects.css';
 
 const styles = theme => ({
@@ -31,6 +32,15 @@ const styles = theme => ({
     marginTop: 68,
     position: 'absolute',
     marginLeft: -238,
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 0,
+      position: 'inherit'
+    }
+  },
+  pythonCard: {
+    position: 'absolute',
+    marginTop: '39%',
+    marginLeft: '-12%',
     [theme.breakpoints.down('sm')]: {
       marginLeft: 0,
       position: 'inherit'
@@ -97,6 +107,49 @@ class Projects extends React.Component {
         <Card className={`${classes.card}  ${classes.lambdaCard}`}>
           <CardMedia
             className={classes.media}
+            image={WeatherAppPicture}
+            title="WeatherAppPicture"
+          />
+          <CardContent>
+            <Typography
+              gutterBottom
+              variant="headline"
+              component="h2"
+              color="secondary"
+            >
+              Weather App
+            </Typography>
+            <Typography component="p" color="primary">
+              Weather app is a Single Page Application that uses Dark Sky API to
+              obtain the weather for the current day and four days after. <br />
+              This Application also uses the Map Quest Geocoding API to get the
+              location that is entered into the search bar. <br />
+              Tech Stack: React, React-Redux, Material-UI, Axios, Moment, and
+              Prop-types.
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <a
+              href={'https://weather-app-darksky.netlify.com/'}
+              style={{ textDecoration: 'none' }}
+            >
+              <Button size="small" color="secondary">
+                View Site
+              </Button>
+            </a>
+            <a
+              href={'https://github.com/nncoultas/Weather-App'}
+              style={{ textDecoration: 'none' }}
+            >
+              <Button size="small" color="secondary">
+                View Code
+              </Button>
+            </a>
+          </CardActions>
+        </Card>
+        <Card className={`${classes.card}  ${classes.lambdaCard}`}>
+          <CardMedia
+            className={classes.media}
             image={LambdaNotes}
             title="lambdaNotes"
           />
@@ -146,7 +199,7 @@ class Projects extends React.Component {
             </a>
           </CardActions>
         </Card>
-        <Card className={`${classes.card}  ${classes.lambdaCard}`}>
+        <Card className={`${classes.card} ${classes.pythonCard}`}>
           <CardMedia
             className={classes.media}
             image={PythonPicture}
