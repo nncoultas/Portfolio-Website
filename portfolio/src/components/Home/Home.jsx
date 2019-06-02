@@ -11,7 +11,16 @@ import PhoneIcon from './baseline-phone-24px.svg';
 import ResumeIcon from './resume.svg';
 
 const styles = () => ({
-  pageStyle: {
+  topPageStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: '2%',
+    backgroundColor: '#f5f8fa',
+    borderBottom: '1px solid rgba(0,0,0,.125)',
+    borderTop: '1px solid rgba(0,0,0,.125)'
+  },
+  bottomPageStyle: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -22,7 +31,7 @@ const styles = () => ({
     height: '0%'
   },
   titleStyle: {
-    marginTop: '1%'
+    marginTop: '0.5%'
   }
 });
 
@@ -52,7 +61,7 @@ class Home extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <Typography className={classes.pageStyle}>
+        <Typography className={classes.topPageStyle}>
           <Avatar src={HeadShot} className={classes.pictureStyle} />
           <Typography
             variant="display3"
@@ -62,8 +71,10 @@ class Home extends React.Component {
             Nick Coultas
           </Typography>
           <Typography variant="headline" color="primary">
-            Software Engineer from Reno, Nevada
+            Let's create things that make a difference.
           </Typography>
+        </Typography>
+        <Typography className={classes.bottomPageStyle}>
           <Typography color="primary">
             My passion in life has always been technology. I started from the
             ground up exploring every avenue I could where I could learn about

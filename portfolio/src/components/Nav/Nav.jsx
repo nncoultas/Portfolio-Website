@@ -1,17 +1,21 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import accountCircle from './baseline-account_circle-24px.svg';
 import note from './baseline-note-24px.svg';
-// import home from './baseline-home-24px.svg';
 import subject from './baseline-subject-24px.svg';
 import { Link } from 'react-router-dom';
 
 const styles = () => ({
   title: {
     fontSize: '23px'
+  },
+  subTitle: {
+    fontSize: '10px',
+    color: 'white'
   },
   end: {
     display: 'flex',
@@ -51,7 +55,14 @@ class Nav extends React.Component {
             <div className={classes.start}>
               <Tab
                 className={classes.start}
-                label={<span className={classes.title}>Nick Coultas</span>}
+                label={
+                  <span className={classes.title}>
+                    Nick Coultas <br />
+                    <a className={classes.subTitle}>
+                      Full Stack Software Engineer
+                    </a>
+                  </span>
+                }
                 component={Link}
                 to="/"
               />
@@ -81,5 +92,4 @@ class Nav extends React.Component {
   }
 }
 
-// export default Nav;
 export default withStyles(styles)(Nav);
