@@ -1,43 +1,138 @@
 import React from 'react';
-import './Home.css';
-import Particles from 'react-particles-js';
+import HeadShot from './image1.jpeg';
+import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar';
+import Chip from '@material-ui/core/Chip';
+import { withStyles } from '@material-ui/core/styles';
+import GitHubIcon from './25231.svg';
+import LinkedInIcon from './61109.svg';
+import EmailIcon from './54215.svg';
+import PhoneIcon from './baseline-phone-24px.svg';
+import ResumeIcon from './resume.svg';
 
-const particleParams = {
-  particles: {
-    number: {
-      value: 120,
-      density: {
-        enable: true,
-        value_area: 800
-      }
-    },
-    line_linked: {
-      shadow: {
-        enable: true,
-        color: '#FF000B'
-      }
-    }
+const styles = () => ({
+  pageStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: '2%'
+  },
+  pictureStyle: {
+    width: '6%',
+    height: '0%'
+  },
+  titleStyle: {
+    marginTop: '1%'
   }
-};
+});
 
 class Home extends React.Component {
+  copyEmail = () => {
+    let textField = document.createElement('textarea');
+    textField.innerText = 'nncoultas@yahoo.com';
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand('copy');
+    textField.remove();
+    document.getElementById('email').title =
+      'My email address has been copied to your clipboard!';
+  };
+
+  copyPhoneNumber = () => {
+    let phoneTextField = document.createElement('textarea');
+    phoneTextField.innerText = '775-636-2352';
+    document.body.appendChild(phoneTextField);
+    phoneTextField.select();
+    document.execCommand('copy');
+    phoneTextField.remove();
+    document.getElementById('phone').title =
+      'My phone number has been copied to your clipboard!';
+  };
   render() {
+    const { classes } = this.props;
     return (
       <div>
-        <div className="particles">
-          <Particles params={particleParams} />
-        </div>
-        <div className="homeWrapper">
-          <div className="header">
-            <h1 className="titleText">
-              My Name is Nick Coultas. <br />
-              Welcome to my Website. <br />
-            </h1>
-          </div>
-        </div>
+        <Typography className={classes.pageStyle}>
+          <Avatar src={HeadShot} className={classes.pictureStyle} />
+          <Typography
+            variant="display3"
+            color="secondary"
+            className={classes.titleStyle}
+          >
+            Nick Coultas
+          </Typography>
+          <Typography variant="headline" color="primary">
+            Software Engineer from Reno, Nevada
+          </Typography>
+          <Typography color="primary">
+            My passion in life has always been technology. I started from the
+            ground up exploring every avenue I could where I could learn about
+            computers and software. I took a position with Best Buy as a Sales
+            associate so I could dive into hardware and support (the roots of
+            technology). At that point in my life, I was still eager to learn
+            more and take a deeper dive into software engineering. I found an
+            intense and immersive program through Lambda School where I learned
+            Javascript, React, Redux, HTML/CSS, HTTP/AJAX, Node.js, and
+            Express.js. With my experience working on teams from a technical and
+            non-technical standpoint, I believe I could utilize my soft skills
+            and technical skills to be part of a productive development team,
+            creating meaningful code and projects.
+          </Typography>
+          <Typography>
+            <a
+              href={'http://github.com/nncoultas'}
+              title="View my Github"
+              style={{ textDecoration: 'none' }}
+            >
+              <Chip
+                avatar={<Avatar src={GitHubIcon} alt="GitHub Icon" />}
+                label="My Github"
+                clickable
+              />
+            </a>
+            <a
+              href={'https://www.linkedin.com/in/nick-coultas-a1491b167/'}
+              title="Connect with me on LinkedIn"
+              style={{ textDecoration: 'none' }}
+            >
+              <Chip
+                avatar={<Avatar src={LinkedInIcon} alt="LinkedIn Icon" />}
+                label="My LinkedIn"
+                clickable
+              />
+            </a>
+            <a title="Click the icon to copy my email!" id="email">
+              <Chip
+                avatar={<Avatar src={EmailIcon} alt="Email Icon" />}
+                onClick={this.copyEmail}
+                label="Copy my email address"
+              />
+            </a>
+            <a title="Click the icon to copy my phone number" id="phone">
+              <Chip
+                avatar={<Avatar src={PhoneIcon} alt="Phone Icon" />}
+                onClick={this.copyPhoneNumber}
+                label="Copy my phone number"
+              />
+            </a>
+            <a
+              href={
+                'https://drive.google.com/file/d/1WqUydLNgRudNzbpIFAwRrPFhR2IQBTn-/view'
+              }
+              title="Click the icon to view my resume"
+              style={{ textDecoration: 'none' }}
+            >
+              <Chip
+                avatar={<Avatar src={ResumeIcon} alt="Resume Icon" />}
+                label="My Resume"
+                clickable
+              />
+            </a>
+          </Typography>
+        </Typography>
       </div>
     );
   }
 }
 
-export default Home;
+export default withStyles(styles)(Home);
