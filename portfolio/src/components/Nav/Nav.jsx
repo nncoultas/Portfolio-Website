@@ -1,12 +1,32 @@
 import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import accountCircle from './baseline-account_circle-24px.svg';
 import note from './baseline-note-24px.svg';
-import home from './baseline-home-24px.svg';
+// import home from './baseline-home-24px.svg';
 import subject from './baseline-subject-24px.svg';
 import { Link } from 'react-router-dom';
+
+const styles = () => ({
+  title: {
+    fontSize: '23px'
+  },
+  end: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
+  start: {
+    flexGrow: 1,
+    opacity: 1,
+    display: 'flex',
+    alignItems: 'center'
+  },
+  noIndicator: {
+    height: 0
+  }
+});
 
 class Nav extends React.Component {
   state = {
@@ -18,17 +38,24 @@ class Nav extends React.Component {
   };
 
   render() {
+    const { classes } = this.props;
     const { value } = this.state;
     return (
-      <div>
+      <div className={classes.root}>
         <AppBar position="static" style={{ backgroundColor: '#2a6ccf' }}>
-          <Tabs value={value} onChange={this.handleChange} centered>
-            <Tab
-              label="Home"
-              icon={<img src={home} alt="home" />}
-              component={Link}
-              to="/"
-            />
+          <Tabs
+            classes={{ indicator: classes.noIndicator }}
+            value={value}
+            onChange={this.handleChange}
+          >
+            <div className={classes.start}>
+              <Tab
+                className={classes.start}
+                label={<span className={classes.title}>Nick Coultas</span>}
+                component={Link}
+                to="/"
+              />
+            </div>
             <Tab
               label="About"
               icon={<img src={accountCircle} alt="account-cirlce" />}
@@ -54,4 +81,5 @@ class Nav extends React.Component {
   }
 }
 
-export default Nav;
+// export default Nav;
+export default withStyles(styles)(Nav);
