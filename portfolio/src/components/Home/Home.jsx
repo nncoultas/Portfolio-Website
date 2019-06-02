@@ -22,9 +22,17 @@ const styles = () => ({
   },
   bottomPageStyle: {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    marginTop: '2%'
+    justifyContent: 'space-evenly',
+    maxWidth: '35%',
+    marginTop: '2%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  textSize: {
+    width: '57%'
+  },
+  chipSize: {
+    width: '14%'
   },
   pictureStyle: {
     width: '6%',
@@ -75,7 +83,7 @@ class Home extends React.Component {
           </Typography>
         </Typography>
         <Typography className={classes.bottomPageStyle}>
-          <Typography color="primary">
+          <Typography color="primary" className={classes.textSize}>
             My passion in life has always been technology. I started from the
             ground up exploring every avenue I could where I could learn about
             computers and software. I took a position with Best Buy as a Sales
@@ -89,7 +97,7 @@ class Home extends React.Component {
             and technical skills to be part of a productive development team,
             creating meaningful code and projects.
           </Typography>
-          <Typography>
+          <Typography className={classes.chipSize}>
             <a
               href={'http://github.com/nncoultas'}
               title="View my Github"
