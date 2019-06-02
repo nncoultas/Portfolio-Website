@@ -12,39 +12,15 @@ import PythonPicture from './Python.png';
 import WeatherAppPicture from './WeatherApp.png';
 import './Projects.css';
 
-const styles = theme => ({
+const styles = () => ({
   card: {
     borderRadius: 0,
-    maxWidth: 462
+    maxWidth: 462,
+    margin: '0.5%'
   },
   media: {
     height: 0,
     paddingTop: '56.25%'
-  },
-  lambdaCard: {
-    marginLeft: 602,
-    marginTop: 68,
-    [theme.breakpoints.down('sm')]: {
-      marginLeft: 0
-    }
-  },
-  BackWoodsCard: {
-    marginTop: 68,
-    position: 'absolute',
-    marginLeft: -238,
-    [theme.breakpoints.down('sm')]: {
-      marginLeft: 0,
-      position: 'inherit'
-    }
-  },
-  pythonCard: {
-    position: 'absolute',
-    marginTop: '39%',
-    marginLeft: '-12%',
-    [theme.breakpoints.down('sm')]: {
-      marginLeft: 0,
-      position: 'inherit'
-    }
   }
 });
 
@@ -53,7 +29,7 @@ class Projects extends React.Component {
     const { classes } = this.props;
     return (
       <div className="projectView">
-        <Card className={`${classes.card}  ${classes.BackWoodsCard}`}>
+        <Card className={`${classes.card}`}>
           <CardMedia
             className={classes.media}
             image={BackwoodsPicture}
@@ -104,7 +80,7 @@ class Projects extends React.Component {
             </a>
           </CardActions>
         </Card>
-        <Card className={`${classes.card}  ${classes.lambdaCard}`}>
+        <Card className={`${classes.card}`}>
           <CardMedia
             className={classes.media}
             image={WeatherAppPicture}
@@ -147,7 +123,7 @@ class Projects extends React.Component {
             </a>
           </CardActions>
         </Card>
-        <Card className={`${classes.card}  ${classes.lambdaCard}`}>
+        <Card className={`${classes.card}`}>
           <CardMedia
             className={classes.media}
             image={LambdaNotes}
@@ -199,7 +175,7 @@ class Projects extends React.Component {
             </a>
           </CardActions>
         </Card>
-        <Card className={`${classes.card} ${classes.pythonCard}`}>
+        <Card className={`${classes.card}`}>
           <CardMedia
             className={classes.media}
             image={PythonPicture}
