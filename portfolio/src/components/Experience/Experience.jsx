@@ -48,7 +48,7 @@ const styles = () => ({
     overflow: 'inherit'
   }
 });
-class About extends React.Component {
+class Experience extends React.Component {
   render() {
     const { classes } = this.props;
     return (
@@ -158,4 +158,4 @@ class About extends React.Component {
   }
 }
 
-export default withStyles(styles)(About);
+export default withStyles(styles)(Experience);

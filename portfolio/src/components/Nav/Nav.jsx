@@ -68,10 +68,10 @@ class Nav extends React.Component {
               />
             </div>
             <Tab
-              label="About"
+              label="Experience"
               icon={<img src={accountCircle} alt="account-cirlce" />}
               component={Link}
-              to="/About"
+              to="/Experience"
             />
             <Tab
               label="Projects"
