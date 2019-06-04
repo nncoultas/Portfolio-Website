@@ -4,6 +4,16 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 class Skills extends React.Component {
+  copyEmail = () => {
+    let textField = document.createElement('textarea');
+    textField.innerText = 'nncoultas@yahoo.com';
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand('copy');
+    textField.remove();
+    document.getElementById('email').title =
+      'My email address has been copied to your clipboard!';
+  };
   render() {
     return (
       <div>

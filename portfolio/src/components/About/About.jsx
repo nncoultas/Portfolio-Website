@@ -2,37 +2,34 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({});
+const styles = theme => ({
+  topPageStyle: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: '2%',
+    backgroundColor: '#f5f8fa',
+    borderBottom: '1px solid rgba(0,0,0,.125)',
+    borderTop: '1px solid rgba(0,0,0,.125)'
+  }
+});
 class About extends React.Component {
-  copyEmail = () => {
-    let textField = document.createElement('textarea');
-    textField.innerText = 'nncoultas@yahoo.com';
-    document.body.appendChild(textField);
-    textField.select();
-    document.execCommand('copy');
-    textField.remove();
-    document.getElementById('email').title =
-      'My email address has been copied to your clipboard!';
-  };
-
-  copyPhoneNumber = () => {
-    let phoneTextField = document.createElement('textarea');
-    phoneTextField.innerText = '775-636-2352';
-    document.body.appendChild(phoneTextField);
-    phoneTextField.select();
-    document.execCommand('copy');
-    phoneTextField.remove();
-    document.getElementById('phone').title =
-      'My phone number has been copied to your clipboard!';
-  };
   render() {
     const { classes } = this.props;
     return (
       <div>
-        <Typography />
         <Typography>
-          <Typography variant="display3" color="secondary">
+          <Typography
+            className={classes.topPageStyle}
+            variant="display3"
+            color="secondary"
+          >
             Experience
+            <Typography>
+              Want to check out my recent projects I've been working on?
+              <br />
+              <a href="http://github.com/nncoultas">Check out my github.</a>
+            </Typography>
           </Typography>
           <Typography variant="headline" color="primary">
             Software Engineer
