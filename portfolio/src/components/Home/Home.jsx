@@ -44,8 +44,12 @@ const styles = theme => ({
       width: '165%'
     }
   },
-  chipSize: {
+  chipLayout: {
     width: '14%'
+  },
+  chipStyle: {
+    backgroundColor: 'white',
+    color: 'Black'
   },
   pictureStyle: {
     width: '6%',
@@ -112,7 +116,7 @@ class Home extends React.Component {
             and technical skills to be part of a productive development team,
             creating meaningful code and projects.
           </Typography>
-          <Typography className={classes.chipSize}>
+          <Typography className={classes.chipLayout}>
             <br />
             <Typography variant="headline">Contact</Typography>
             <br />
@@ -122,6 +126,7 @@ class Home extends React.Component {
               style={{ textDecoration: 'none' }}
             >
               <Chip
+                className={classes.chipStyle}
                 avatar={<Avatar src={GitHubIcon} alt="GitHub Icon" />}
                 label="Github"
                 clickable
@@ -133,6 +138,7 @@ class Home extends React.Component {
               style={{ textDecoration: 'none' }}
             >
               <Chip
+                className={classes.chipStyle}
                 avatar={<Avatar src={LinkedInIcon} alt="LinkedIn Icon" />}
                 label="LinkedIn"
                 clickable
@@ -140,6 +146,7 @@ class Home extends React.Component {
             </a>
             <a title="Click the icon to copy my email!" id="email">
               <Chip
+                className={classes.chipStyle}
                 avatar={<Avatar src={EmailIcon} alt="Email Icon" />}
                 onClick={this.copyEmail}
                 label="Copy my email address"
@@ -147,6 +154,7 @@ class Home extends React.Component {
             </a>
             <a title="Click the icon to copy my phone number" id="phone">
               <Chip
+                className={classes.chipStyle}
                 avatar={<Avatar src={PhoneIcon} alt="Phone Icon" />}
                 onClick={this.copyPhoneNumber}
                 label="Copy my phone number"
@@ -160,6 +168,7 @@ class Home extends React.Component {
               style={{ textDecoration: 'none' }}
             >
               <Chip
+                className={classes.chipStyle}
                 avatar={<Avatar src={ResumeIcon} alt="Resume Icon" />}
                 label="My Resume"
                 clickable
