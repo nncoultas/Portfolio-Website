@@ -30,6 +30,9 @@ const styles = theme => ({
     paddingBottom: '4%',
     borderBottom: '1px solid rgba(0,0,0,.125)'
   },
+  cardStyle: {
+    marginBottom: '10%'
+  },
   cardContentStyle: {
     paddingTop: '5%'
   },
@@ -57,7 +60,7 @@ class About extends React.Component {
             </Typography>
           </Typography>
           <Typography className={classes.bottomPageStyle}>
-            <Card>
+            <Card className={classes.cardStyle}>
               <CardContent>
                 <Typography
                   className={classes.companyStyle}
@@ -104,19 +107,41 @@ class About extends React.Component {
                 </Typography>
               </CardContent>
             </Card>
-            <Typography variant="headline" color="primary">
-              Sales Asscoiate
-            </Typography>
-            <Typography variant="title" color="primary">
-              Best Buy | November 2016 - Present
-            </Typography>
-            <Typography color="primary">
-              Home Theater/Computer sales associate with a team of 5+ people
-            </Typography>
-            <Typography color="primary">
-              Required to hit a quota of sales each month both personal and
-              section wide.
-            </Typography>
+            <Card>
+              <CardContent>
+                <Typography
+                  className={classes.companyStyle}
+                  variant="h1"
+                  component="h2"
+                  color="primary"
+                >
+                  Best Buy
+                  <Typography> Sales Asscoiate</Typography>
+                </Typography>
+                <Typography
+                  className={classes.cardContentStyle}
+                  color="primary"
+                >
+                  <ul>
+                    <li>
+                      Home Theater/Computer sales associate with a team of 5+
+                      people
+                    </li>
+                    <li>
+                      Required to hit a quota of sales each month both personal
+                      and section wide.
+                    </li>
+                  </ul>
+                </Typography>
+                <Typography
+                  className={classes.cardFooterStyle}
+                  variant="subtitle1"
+                  color="textSecondary"
+                >
+                  November 2016 - March 2019
+                </Typography>
+              </CardContent>
+            </Card>
           </Typography>
         </Typography>
       </div>
