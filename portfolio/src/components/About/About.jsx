@@ -1,10 +1,14 @@
 import React from 'react';
+import Avatar from '@material-ui/core/Avatar';
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+import LambdaIcon from './1_iTABE417EkZDwRv9Uj91Qg.png';
+import BestBuyIcon from './Best-Buy-Logo.gif';
+
+const styles = () => ({
   topPageStyle: {
     display: 'flex',
     flexDirection: 'column',
@@ -39,6 +43,9 @@ const styles = theme => ({
   cardFooterStyle: {
     paddingTop: '6%',
     fontSize: '87%'
+  },
+  workLogoStyle: {
+    overflow: 'inherit'
   }
 });
 class About extends React.Component {
@@ -68,6 +75,7 @@ class About extends React.Component {
                   component="h2"
                   color="primary"
                 >
+                  <Avatar className={classes.workLogoStyle} src={LambdaIcon} />
                   Lambda School
                   <Typography>Software Engineer</Typography>
                 </Typography>
@@ -115,6 +123,7 @@ class About extends React.Component {
                   component="h2"
                   color="primary"
                 >
+                  <Avatar className={classes.workLogoStyle} src={BestBuyIcon} />
                   Best Buy
                   <Typography> Sales Asscoiate</Typography>
                 </Typography>
