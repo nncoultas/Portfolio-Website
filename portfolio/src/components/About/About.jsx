@@ -1,8 +1,5 @@
 import React from 'react';
-import HeadShot from './image1.jpeg';
 import Typography from '@material-ui/core/Typography';
-import Avatar from '@material-ui/core/Avatar';
-import Chip from '@material-ui/core/Chip';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({});
