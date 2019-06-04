@@ -10,7 +10,7 @@ import EmailIcon from './54215.svg';
 import PhoneIcon from './baseline-phone-24px.svg';
 import ResumeIcon from './resume.svg';
 
-const styles = () => ({
+const styles = theme => ({
   topPageStyle: {
     display: 'flex',
     flexDirection: 'column',
@@ -26,10 +26,23 @@ const styles = () => ({
     maxWidth: '35%',
     marginTop: '2%',
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
+    [theme.breakpoints.up('md')]: {
+      maxWidth: '55%'
+    },
+    [theme.breakpoints.down('sm')]: {
+      display: 'flex',
+      flexDirection: 'column'
+    }
   },
   textSize: {
-    width: '57%'
+    width: '57%',
+    [theme.breakpoints.down('md')]: {
+      width: '76%'
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '165%'
+    }
   },
   chipSize: {
     width: '14%'
@@ -84,6 +97,8 @@ class Home extends React.Component {
         </Typography>
         <Typography className={classes.bottomPageStyle}>
           <Typography color="primary" className={classes.textSize}>
+            <Typography variant="headline">About Me</Typography>
+            <br />
             My passion in life has always been technology. I started from the
             ground up exploring every avenue I could where I could learn about
             computers and software. I took a position with Best Buy as a Sales
@@ -98,6 +113,9 @@ class Home extends React.Component {
             creating meaningful code and projects.
           </Typography>
           <Typography className={classes.chipSize}>
+            <br />
+            <Typography variant="headline">Contact</Typography>
+            <br />
             <a
               href={'http://github.com/nncoultas'}
               title="View my Github"
@@ -105,7 +123,7 @@ class Home extends React.Component {
             >
               <Chip
                 avatar={<Avatar src={GitHubIcon} alt="GitHub Icon" />}
-                label="My Github"
+                label="Github"
                 clickable
               />
             </a>
@@ -116,7 +134,7 @@ class Home extends React.Component {
             >
               <Chip
                 avatar={<Avatar src={LinkedInIcon} alt="LinkedIn Icon" />}
-                label="My LinkedIn"
+                label="LinkedIn"
                 clickable
               />
             </a>
