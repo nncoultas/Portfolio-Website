@@ -73,6 +73,7 @@ class Nav extends React.Component {
               component={Link}
               to="/Experience"
             />
+            <Tab label="Skills" component={Link} to="/Skills" />
             <Tab
               label="Projects"
               icon={<img src={note} alt="note" />}
