@@ -123,6 +123,34 @@ class Experience extends React.Component {
                   component="h2"
                   color="primary"
                 >
+                  {/* <Avatar className={classes.workLogoStyle} /> */}
+
+                  <Typography> </Typography>
+                </Typography>
+                <Typography
+                  className={classes.cardContentStyle}
+                  color="primary"
+                >
+                  <ul>
+                    <li />
+                    <li />
+                  </ul>
+                </Typography>
+                <Typography
+                  className={classes.cardFooterStyle}
+                  variant="subtitle1"
+                  color="textSecondary"
+                />
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent>
+                <Typography
+                  className={classes.companyStyle}
+                  variant="h1"
+                  component="h2"
+                  color="primary"
+                >
                   <Avatar className={classes.workLogoStyle} src={BestBuyIcon} />
                   Best Buy
                   <Typography> Sales Asscoiate</Typography>
