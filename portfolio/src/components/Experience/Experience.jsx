@@ -115,7 +115,7 @@ class Experience extends React.Component {
                 </Typography>
               </CardContent>
             </Card>
-            <Card>
+            <Card className={classes.cardStyle}>
               <CardContent>
                 <Typography
                   className={classes.companyStyle}
@@ -124,23 +124,55 @@ class Experience extends React.Component {
                   color="primary"
                 >
                   {/* <Avatar className={classes.workLogoStyle} /> */}
-
-                  <Typography> </Typography>
+                  Safety-Kleen
+                  <Typography> Utility Rep </Typography>
                 </Typography>
                 <Typography
                   className={classes.cardContentStyle}
                   color="primary"
                 >
                   <ul>
-                    <li />
-                    <li />
+                    <li>
+                      {' '}
+                      I am the relief Sales Route Truck Driver/Oil Tanker Truck
+                      Driver when the work load for current drivers is heavy.{' '}
+                    </li>
+                    <li>
+                      {' '}
+                      When taking over a sales route/oil route I am required to
+                      route myself the most efficiently and driving a box
+                      truck/oil tanker truck to clients shops/warehouses and
+                      help sell oil, parts washer, pig mats, degreaser. I also
+                      am required to service the parts washers, pick up
+                      hazardous waste, and pick up used oil at each shop or
+                      dealershhip and am always looking for an opportunity in
+                      each shop to sell any product we have to help make a
+                      clients life easier and better or to solve a customers
+                      problem that I observe while walking through a
+                      shop/warehouse.
+                    </li>
+                    <li>
+                      {' '}
+                      I also contribute to the admin/warehouse manager with
+                      paperwork for shipping out waste to meet EPA (enviormental
+                      protection agency) standards and putting paperwork
+                      together for the route drivers so they have all the labels
+                      and everything needed for their job at each shop.
+                    </li>
+                    <li>
+                      I help the sales team with new prospects/proposals for
+                      customers by doing cold calls to shops in the area to help
+                      grow the business in any aspect possible
+                    </li>
                   </ul>
                 </Typography>
                 <Typography
                   className={classes.cardFooterStyle}
                   variant="subtitle1"
                   color="textSecondary"
-                />
+                >
+                  March 2019 - Current
+                </Typography>
               </CardContent>
             </Card>
             <Card>
