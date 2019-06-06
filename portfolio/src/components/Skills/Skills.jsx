@@ -25,7 +25,6 @@ const styles = () => ({
   cardLogoStyle: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
     alignItems: 'center',
     height: '100%',
     width: '18%',
