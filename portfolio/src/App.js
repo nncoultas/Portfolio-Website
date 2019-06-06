@@ -4,6 +4,7 @@ import './App.css';
 import Home from './components/Home/Home';
 import Nav from './components/Nav/Nav';
 import Experience from './components/Experience/Experience';
+import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Blog from './components/Blog/Blog';
 
@@ -14,6 +15,7 @@ class App extends Component {
         <Nav />
         <Route path="/" component={Home} exact />
         <Route path="/Experience" component={Experience} />
+        <Route path="/Skills" component={Skills} />
         <Route path="/Projects" component={Projects} />
         <Route path="/Blog" component={Blog} />
       </div>

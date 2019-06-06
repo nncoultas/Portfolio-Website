@@ -3,6 +3,8 @@ import Chip from '@material-ui/core/Chip';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
+const styles = () => {};
+
 class Skills extends React.Component {
   copyEmail = () => {
     let textField = document.createElement('textarea');
@@ -15,6 +17,7 @@ class Skills extends React.Component {
       'My email address has been copied to your clipboard!';
   };
   render() {
+    const { classes } = this.props;
     return (
       <div>
         <Typography className={classes.border} />
