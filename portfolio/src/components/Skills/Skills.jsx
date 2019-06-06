@@ -21,15 +21,22 @@ const styles = () => ({
     borderTop: '1px solid rgba(0,0,0,.125)'
   },
   cardTitleStyle: {},
-  CardContainerStyle: {
+
+  cardLogoStyle: {
     display: 'flex',
-    flexGrow: '1',
-    flexDirection: 'row',
-    justifyContent: 'space-around'
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    width: '18%',
+    paddingRight: '9%'
   },
   avatarStyle: {
-    width: '7%',
-    height: '0%'
+    width: '33%',
+    height: '32%'
+  },
+  cardContainerStyle: {
+    display: 'flex'
   }
 });
 
@@ -56,14 +63,26 @@ class Skills extends React.Component {
                 >
                   Languages
                 </Typography>
-                <div className={classes.CardContainerStyle}>
-                  <Avatar
-                    src={JavascriptIcon}
-                    className={classes.avatarStyle}
-                  />
-                  <Avatar src={HtmlIcon} className={classes.avatarStyle} />
-                  <Avatar src={CIcon} className={classes.avatarStyle} />
-                  <Avatar src={PythonIcon} className={classes.avatarStyle} />
+                <div className={classes.cardContainerStyle}>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar
+                      className={classes.avatarStyle}
+                      src={JavascriptIcon}
+                    />
+                    <p>Javascript</p>
+                  </Typography>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar className={classes.avatarStyle} src={HtmlIcon} />
+                    <p>HTML</p>
+                  </Typography>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar className={classes.avatarStyle} src={CIcon} />
+                    <p>C</p>
+                  </Typography>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar className={classes.avatarStyle} src={PythonIcon} />
+                    <p>Python</p>
+                  </Typography>
                 </div>
               </CardContent>
             </Card>
