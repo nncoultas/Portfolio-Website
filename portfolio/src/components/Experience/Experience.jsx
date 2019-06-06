@@ -7,6 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import LambdaIcon from './1_iTABE417EkZDwRv9Uj91Qg.png';
 import BestBuyIcon from './Best-Buy-Logo.gif';
+import SafetyKleenIcon from './Safety-Kleen-Logo.png';
 
 const styles = () => ({
   topPageStyle: {
@@ -123,7 +124,10 @@ class Experience extends React.Component {
                   component="h2"
                   color="primary"
                 >
-                  {/* <Avatar className={classes.workLogoStyle} /> */}
+                  <Avatar
+                    className={classes.workLogoStyle}
+                    src={SafetyKleenIcon}
+                  />
                   Safety-Kleen
                   <Typography> Utility Rep </Typography>
                 </Typography>
