@@ -9,7 +9,7 @@ import LambdaIcon from './1_iTABE417EkZDwRv9Uj91Qg.png';
 import BestBuyIcon from './Best-Buy-Logo.gif';
 import SafetyKleenIcon from './Safety-Kleen-Logo.png';
 
-const styles = () => ({
+const styles = theme => ({
   topPageStyle: {
     display: 'flex',
     flexDirection: 'column',
@@ -25,7 +25,10 @@ const styles = () => ({
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '30%',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+      width: '97%'
+    }
   },
   companyStyle: {
     display: 'flex',
