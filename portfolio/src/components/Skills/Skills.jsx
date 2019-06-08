@@ -9,6 +9,10 @@ import JavascriptIcon from './javascript-logo.png';
 import HtmlIcon from './HTML-logo.png';
 import CIcon from './C-Logo.png';
 import PythonIcon from './Python-logo.png';
+import CSS3Icon from './css3-logo.png';
+import ReactIcon from './React-logo.png';
+import BootstrapIcon from './bootstrap-logo.jpg';
+import LessIcon from './less-logo.png';
 
 const styles = () => ({
   topPageStyle: {
@@ -27,7 +31,7 @@ const styles = () => ({
     flexDirection: 'column',
     alignItems: 'center',
     height: '100%',
-    width: '18%',
+    width: '12%',
     paddingRight: '9%'
   },
   avatarStyle: {
@@ -71,10 +75,6 @@ class Skills extends React.Component {
                     <p>Javascript</p>
                   </Typography>
                   <Typography className={classes.cardLogoStyle}>
-                    <Avatar className={classes.avatarStyle} src={HtmlIcon} />
-                    <p>HTML</p>
-                  </Typography>
-                  <Typography className={classes.cardLogoStyle}>
                     <Avatar className={classes.avatarStyle} src={CIcon} />
                     <p>C</p>
                   </Typography>
@@ -90,6 +90,31 @@ class Skills extends React.Component {
                 <Typography variant="headline" color="Primary">
                   Front-End
                 </Typography>
+                <div className={classes.cardContainerStyle}>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar className={classes.avatarStyle} src={HtmlIcon} />
+                    <p>HTML</p>
+                  </Typography>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar className={classes.avatarStyle} src={CSS3Icon} />
+                    CSS3
+                  </Typography>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar className={classes.avatarStyle} src={ReactIcon} />
+                    React
+                  </Typography>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar
+                      className={classes.avatarStyle}
+                      src={BootstrapIcon}
+                    />
+                    Bootstrap
+                  </Typography>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar className={classes.avatarStyle} src={LessIcon} />
+                    Less
+                  </Typography>
+                </div>
               </CardContent>
             </Card>
             <Card>
