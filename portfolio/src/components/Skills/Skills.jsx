@@ -13,6 +13,10 @@ import CSS3Icon from './css3-logo.png';
 import ReactIcon from './React-logo.png';
 import BootstrapIcon from './bootstrap-logo.jpg';
 import LessIcon from './less-logo.png';
+import PostgreSQLIcon from './postgreSQL-logo.png';
+import MongoDBIcon from './MongoDB-logo.jpg';
+import NodeJSIcon from './nodejs-logo.jpg';
+import DjangoIcon from './django-logo.png';
 
 const styles = () => ({
   topPageStyle: {
@@ -122,6 +126,27 @@ class Skills extends React.Component {
                 <Typography variant="headline" color="Primary">
                   Back-End
                 </Typography>
+                <div className={classes.cardContainerStyle}>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar
+                      className={classes.avatarStyle}
+                      src={PostgreSQLIcon}
+                    />
+                    PostgreSQL
+                  </Typography>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar className={classes.avatarStyle} src={MongoDBIcon} />
+                    MogoDB
+                  </Typography>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar className={classes.avatarStyle} src={NodeJSIcon} />
+                    Node
+                  </Typography>
+                  <Typography className={classes.cardLogoStyle}>
+                    <Avatar className={classes.avatarStyle} src={DjangoIcon} />
+                    Django
+                  </Typography>
+                </div>
               </CardContent>
             </Card>
           </Typography>
