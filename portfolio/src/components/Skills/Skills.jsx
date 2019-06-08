@@ -18,32 +18,48 @@ import MongoDBIcon from './MongoDB-logo.jpg';
 import NodeJSIcon from './nodejs-logo.jpg';
 import DjangoIcon from './django-logo.png';
 
-const styles = () => ({
+const styles = theme => ({
   topPageStyle: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     marginTop: '2%',
+    marginBottom: '2%',
     backgroundColor: '#f5f8fa',
     borderBottom: '1px solid rgba(0,0,0,.125)',
     borderTop: '1px solid rgba(0,0,0,.125)'
   },
-  cardTitleStyle: {},
-
+  cardStyle: {
+    marginBottom: '5%'
+  },
+  cardTitleStyle: {
+    marginBottom: '1%'
+  },
+  border: {
+    borderBottom: '1px solid rgba(0,0,0,.125)',
+    marginBottom: '2%'
+  },
   cardLogoStyle: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     height: '100%',
     width: '12%',
-    paddingRight: '9%'
+    paddingRight: '9%',
+    [theme.breakpoints.down('sm')]: {
+      width: '40%'
+    }
   },
   avatarStyle: {
     width: '33%',
     height: '32%'
   },
   cardContainerStyle: {
-    display: 'flex'
+    display: 'flex',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'row',
+      flexWrap: 'wrap'
+    }
   }
 });
 
@@ -61,7 +77,7 @@ class Skills extends React.Component {
             Skills
           </Typography>
           <Typography>
-            <Card>
+            <Card className={classes.cardStyle}>
               <CardContent>
                 <Typography
                   className={classes.cardTitleStyle}
@@ -70,6 +86,7 @@ class Skills extends React.Component {
                 >
                   Languages
                 </Typography>
+                <Typography className={classes.border} />
                 <div className={classes.cardContainerStyle}>
                   <Typography className={classes.cardLogoStyle}>
                     <Avatar
@@ -89,11 +106,16 @@ class Skills extends React.Component {
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className={classes.cardStyle}>
               <CardContent>
-                <Typography variant="headline" color="Primary">
+                <Typography
+                  className={classes.cardTitleStyle}
+                  variant="headline"
+                  color="Primary"
+                >
                   Front-End
                 </Typography>
+                <Typography className={classes.border} />
                 <div className={classes.cardContainerStyle}>
                   <Typography className={classes.cardLogoStyle}>
                     <Avatar className={classes.avatarStyle} src={HtmlIcon} />
@@ -121,11 +143,16 @@ class Skills extends React.Component {
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className={classes.cardStyle}>
               <CardContent>
-                <Typography variant="headline" color="Primary">
+                <Typography
+                  className={classes.cardTitleStyle}
+                  variant="headline"
+                  color="Primary"
+                >
                   Back-End
                 </Typography>
+                <Typography className={classes.border} />
                 <div className={classes.cardContainerStyle}>
                   <Typography className={classes.cardLogoStyle}>
                     <Avatar
