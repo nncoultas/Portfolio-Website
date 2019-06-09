@@ -33,6 +33,7 @@ const styles = theme => ({
     marginBottom: '5%'
   },
   cardTitleStyle: {
+    color: '#3d7c47',
     marginBottom: '1%'
   },
   border: {
@@ -78,7 +79,6 @@ class Skills extends React.Component {
                 <Typography
                   className={classes.cardTitleStyle}
                   variant="headline"
-                  color="Primary"
                 >
                   Languages
                 </Typography>
@@ -107,7 +107,6 @@ class Skills extends React.Component {
                 <Typography
                   className={classes.cardTitleStyle}
                   variant="headline"
-                  color="Primary"
                 >
                   Front-End
                 </Typography>
@@ -144,7 +143,6 @@ class Skills extends React.Component {
                 <Typography
                   className={classes.cardTitleStyle}
                   variant="headline"
-                  color="Primary"
                 >
                   Back-End
                 </Typography>
