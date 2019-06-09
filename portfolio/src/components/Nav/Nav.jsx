@@ -76,11 +76,18 @@ class Nav extends React.Component {
       onKeyDown={this.toggleDrawer(side, false)}
     >
       <List>
-        {['Experience', 'Skills', 'Projects', 'Blog'].map(text => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <ListItem button key={'Experience'} component={Link} to="/Experience">
+          <ListItemText primary={'Experience'} />
+        </ListItem>
+        <ListItem button key={'Skills'} component={Link} to="/Skills">
+          <ListItemText primary={'Skills'} />
+        </ListItem>
+        <ListItem button key={'Projects'} component={Link} to="/Projects">
+          <ListItemText primary={'Projects'} />
+        </ListItem>
+        <ListItem button key={'Blog'} component={Link} to="/Blog">
+          <ListItemText primary={'Blog'} />
+        </ListItem>
       </List>
     </div>
   );
