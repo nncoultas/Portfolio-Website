@@ -44,7 +44,7 @@ const styles = theme => ({
     }
   },
   buttonStyle: {
-    color: 'white'
+    color: 'black'
   }
 });
 

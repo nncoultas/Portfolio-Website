@@ -14,10 +14,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: '2%',
     backgroundColor: '#f5f8fa',
-    borderBottom: '1px solid rgba(0,0,0,.125)',
-    borderTop: '1px solid rgba(0,0,0,.125)'
+    borderBottom: '1px solid rgba(0,0,0,.125)'
   },
   card: {
     maxWidth: 462,
