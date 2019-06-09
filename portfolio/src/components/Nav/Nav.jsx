@@ -4,6 +4,7 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
 import AppBar from '@material-ui/core/AppBar';
@@ -15,7 +16,7 @@ import MenuIcon from './Menu-Icon.png';
 
 const styles = theme => ({
   title: {
-    color: 'black',
+    color: '#76c1d4',
     fontSize: '23px'
   },
   subTitle: {
@@ -81,15 +82,19 @@ class Nav extends React.Component {
         <ListItem button key={'Experience'} component={Link} to="/Experience">
           <ListItemText primary={'Experience'} />
         </ListItem>
+        <Divider />
         <ListItem button key={'Skills'} component={Link} to="/Skills">
           <ListItemText primary={'Skills'} />
         </ListItem>
+        <Divider />
         <ListItem button key={'Projects'} component={Link} to="/Projects">
           <ListItemText primary={'Projects'} />
         </ListItem>
+        <Divider />
         <ListItem button key={'Blog'} component={Link} to="/Blog">
           <ListItemText primary={'Blog'} />
         </ListItem>
+        <Divider />
       </List>
     </div>
   );

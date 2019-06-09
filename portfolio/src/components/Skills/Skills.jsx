@@ -20,11 +20,13 @@ import DjangoIcon from './django-logo.png';
 
 const styles = theme => ({
   topPageStyle: {
+    color: 'white',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     marginBottom: '2%',
-    backgroundColor: '#f5f8fa',
+    marginTop: '1%',
+    backgroundColor: '#76c1d4',
     borderBottom: '1px solid rgba(0,0,0,.125)'
   },
   cardStyle: {
@@ -67,11 +69,7 @@ class Skills extends React.Component {
     return (
       <div>
         <Typography>
-          <Typography
-            variant="display3"
-            color="secondary"
-            className={classes.topPageStyle}
-          >
+          <Typography variant="display3" className={classes.topPageStyle}>
             Skills
           </Typography>
           <Typography>

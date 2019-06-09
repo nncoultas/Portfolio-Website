@@ -15,7 +15,8 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#f5f8fa',
+    marginTop: '1%',
+    backgroundColor: '#76c1d4',
     borderBottom: '1px solid rgba(0,0,0,.125)'
   },
   bottomPageStyle: {
@@ -54,7 +55,8 @@ const styles = theme => ({
     height: '0%'
   },
   titleStyle: {
-    marginTop: '0.5%'
+    marginTop: '0.5%',
+    color: 'white'
   }
 });
 
@@ -86,14 +88,10 @@ class Home extends React.Component {
       <div>
         <Typography className={classes.topPageStyle}>
           <Avatar src={HeadShot} className={classes.pictureStyle} />
-          <Typography
-            variant="display3"
-            color="secondary"
-            className={classes.titleStyle}
-          >
+          <Typography variant="display3" className={classes.titleStyle}>
             Nick Coultas
           </Typography>
-          <Typography variant="headline" color="primary">
+          <Typography variant="headline" className={classes.titleStyle}>
             Let's create things that make a difference.
           </Typography>
         </Typography>

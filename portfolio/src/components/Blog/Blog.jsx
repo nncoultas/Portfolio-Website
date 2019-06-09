@@ -11,10 +11,12 @@ import './Blog.css';
 
 const styles = {
   topPageStyle: {
+    color: 'white',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#f5f8fa',
+    marginTop: '1%',
+    backgroundColor: '#76c1d4',
     borderBottom: '1px solid rgba(0,0,0,.125)'
   },
   card: {
@@ -32,11 +34,7 @@ class Blog extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <Typography
-          className={classes.topPageStyle}
-          variant="display3"
-          color="secondary"
-        >
+        <Typography className={classes.topPageStyle} variant="display3">
           Blog
         </Typography>
         <div className="blogView">

@@ -11,10 +11,12 @@ import SafetyKleenIcon from './Safety-Kleen-Logo.png';
 
 const styles = theme => ({
   topPageStyle: {
+    color: 'white',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#f5f8fa',
+    marginTop: '1%',
+    backgroundColor: '#76c1d4',
     borderBottom: '1px solid rgba(0,0,0,.125)'
   },
   bottomPageStyle: {
@@ -56,11 +58,7 @@ class Experience extends React.Component {
     return (
       <div>
         <Typography>
-          <Typography
-            className={classes.topPageStyle}
-            variant="display3"
-            color="secondary"
-          >
+          <Typography className={classes.topPageStyle} variant="display3">
             Experience
           </Typography>
           <Typography className={classes.bottomPageStyle}>

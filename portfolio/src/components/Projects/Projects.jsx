@@ -14,10 +14,12 @@ import './Projects.css';
 
 const styles = () => ({
   topPageStyle: {
+    color: 'white',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#f5f8fa',
+    marginTop: '1%',
+    backgroundColor: '#76c1d4',
     borderBottom: '1px solid rgba(0,0,0,.125)'
   },
   card: {
@@ -36,11 +38,7 @@ class Projects extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <Typography
-          className={classes.topPageStyle}
-          variant="display3"
-          color="secondary"
-        >
+        <Typography className={classes.topPageStyle} variant="display3">
           Projects
           <Typography variant="headline">
             Want to check out my recent projects I've been working on?
