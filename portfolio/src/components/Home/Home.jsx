@@ -36,6 +36,7 @@ const styles = theme => ({
   },
   textSize: {
     width: '57%',
+    color: 'black',
     [theme.breakpoints.down('md')]: {
       width: '76%'
     },
@@ -57,6 +58,9 @@ const styles = theme => ({
   titleStyle: {
     marginTop: '0.5%',
     color: 'white'
+  },
+  textColor: {
+    color: '#76c1d4'
   }
 });
 
@@ -96,8 +100,10 @@ class Home extends React.Component {
           </Typography>
         </Typography>
         <Typography className={classes.bottomPageStyle}>
-          <Typography color="primary" className={classes.textSize}>
-            <Typography variant="headline">About Me</Typography>
+          <Typography className={classes.textSize}>
+            <Typography className={classes.textColor} variant="headline">
+              About Me
+            </Typography>
             <br />
             My passion in life has always been technology. I started from the
             ground up exploring every avenue I could where I could learn about
@@ -114,7 +120,9 @@ class Home extends React.Component {
           </Typography>
           <Typography className={classes.chipLayout}>
             <br />
-            <Typography variant="headline">Contact</Typography>
+            <Typography className={classes.textColor} variant="headline">
+              Contact
+            </Typography>
             <br />
             <a
               href={'http://github.com/nncoultas'}
