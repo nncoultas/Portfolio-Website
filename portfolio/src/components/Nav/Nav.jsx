@@ -1,6 +1,10 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -9,7 +13,7 @@ import note from './baseline-note-24px.svg';
 import subject from './baseline-subject-24px.svg';
 import { Link } from 'react-router-dom';
 
-const styles = () => ({
+const styles = theme => ({
   title: {
     fontSize: '23px'
   },
@@ -29,21 +33,62 @@ const styles = () => ({
   },
   noIndicator: {
     height: 0
+  },
+  hideTabs: {
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    }
+  },
+  hideListMenu: {
+    [theme.breakpoints.up('md')]: {
+      display: 'none'
+    }
+  },
+  buttonStyle: {
+    color: 'white'
   }
 });
 
 class Nav extends React.Component {
   state = {
-    value: 0
+    value: 0,
+    right: false
   };
 
   handleChange = (e, value) => {
     this.setState({ value });
   };
 
+  toggleDrawer = (side, open) => event => {
+    if (
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
+    }
+
+    this.setState({ ...this.state, [side]: open });
+  };
+
+  sideList = side => (
+    <div
+      onClick={this.toggleDrawer(side, false)}
+      onKeyDown={this.toggleDrawer(side, false)}
+    >
+      <List>
+        {['Experience', 'Skills', 'Projects', 'Blog'].map(text => (
+          <ListItem button key={text}>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
+
   render() {
     const { classes } = this.props;
     const { value } = this.state;
+
     return (
       <div className={classes.root}>
         <AppBar position="static" style={{ backgroundColor: '#2a6ccf' }}>
@@ -68,24 +113,46 @@ class Nav extends React.Component {
               />
             </div>
             <Tab
+              className={classes.hideTabs}
               label="Experience"
               icon={<img src={accountCircle} alt="account-cirlce" />}
               component={Link}
               to="/Experience"
             />
-            <Tab label="Skills" component={Link} to="/Skills" />
             <Tab
+              className={classes.hideTabs}
+              label="Skills"
+              component={Link}
+              to="/Skills"
+            />
+            <Tab
+              className={classes.hideTabs}
               label="Projects"
               icon={<img src={note} alt="note" />}
               component={Link}
               to="/Projects"
             />
             <Tab
+              className={classes.hideTabs}
               label="Blog"
               icon={<img src={subject} alt="subject" />}
               component={Link}
               to="/Blog"
             />
+            <Button
+              className={`${classes.buttonStyle} ${classes.hideListMenu}`}
+              onClick={this.toggleDrawer('right', true)}
+            >
+              Open Right
+            </Button>
+            <Drawer
+              className={classes.buttonStyle}
+              anchor="right"
+              open={this.state.right}
+              onClose={this.toggleDrawer('right', false)}
+            >
+              {this.sideList('right')}
+            </Drawer>
           </Tabs>
         </AppBar>
       </div>
