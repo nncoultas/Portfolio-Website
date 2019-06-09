@@ -64,11 +64,6 @@ class Experience extends React.Component {
             color="secondary"
           >
             Experience
-            <Typography variant="headline">
-              Want to check out my recent projects I've been working on?
-              <br />
-              <a href="http://github.com/nncoultas">Check out my github.</a>
-            </Typography>
           </Typography>
           <Typography className={classes.bottomPageStyle}>
             <Card className={classes.cardStyle}>
