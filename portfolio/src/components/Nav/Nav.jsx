@@ -21,7 +21,7 @@ const styles = theme => ({
   },
   subTitle: {
     fontSize: '10px',
-    color: 'black'
+    color: '#3d7c47'
   },
   end: {
     display: 'flex',

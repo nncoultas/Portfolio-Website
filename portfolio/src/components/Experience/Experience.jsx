@@ -31,12 +31,16 @@ const styles = theme => ({
     }
   },
   companyStyle: {
+    color: '#76c1d4',
     display: 'flex',
     justifyContent: 'space-between',
     flexGrow: 1,
     paddingTop: '4%',
     paddingBottom: '4%',
     borderBottom: '1px solid rgba(0,0,0,.125)'
+  },
+  jobTitleStyle: {
+    color: '#3d7c47'
   },
   cardStyle: {
     marginBottom: '10%'
@@ -68,16 +72,14 @@ class Experience extends React.Component {
                   className={classes.companyStyle}
                   variant="h1"
                   component="h2"
-                  color="primary"
                 >
                   <Avatar className={classes.workLogoStyle} src={LambdaIcon} />
                   Lambda School
-                  <Typography>Software Engineer</Typography>
+                  <Typography className={classes.jobTitleStyle}>
+                    Software Engineer
+                  </Typography>
                 </Typography>
-                <Typography
-                  className={classes.cardContentStyle}
-                  color="primary"
-                >
+                <Typography className={classes.cardContentStyle}>
                   <ul>
                     <li>
                       6+ months Full-Time CS Fundamental/software development
@@ -123,12 +125,12 @@ class Experience extends React.Component {
                     src={SafetyKleenIcon}
                   />
                   Safety-Kleen
-                  <Typography> Utility Rep </Typography>
+                  <Typography className={classes.jobTitleStyle}>
+                    {' '}
+                    Utility Rep{' '}
+                  </Typography>
                 </Typography>
-                <Typography
-                  className={classes.cardContentStyle}
-                  color="primary"
-                >
+                <Typography className={classes.cardContentStyle}>
                   <ul>
                     <li>
                       {' '}
@@ -179,16 +181,14 @@ class Experience extends React.Component {
                   className={classes.companyStyle}
                   variant="h1"
                   component="h2"
-                  color="primary"
                 >
                   <Avatar className={classes.workLogoStyle} src={BestBuyIcon} />
                   Best Buy
-                  <Typography> Sales Asscoiate</Typography>
+                  <Typography className={classes.jobTitleStyle}>
+                    Sales Asscoiate
+                  </Typography>
                 </Typography>
-                <Typography
-                  className={classes.cardContentStyle}
-                  color="primary"
-                >
+                <Typography className={classes.cardContentStyle}>
                   <ul>
                     <li>
                       Home Theater/Computer sales associate with a team of 5+
