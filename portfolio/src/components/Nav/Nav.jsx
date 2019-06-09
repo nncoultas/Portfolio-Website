@@ -5,10 +5,13 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Button from '@material-ui/core/Button';
+import Avatar from '@material-ui/core/Avatar';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { Link } from 'react-router-dom';
+
+import MenuIcon from './Menu-Icon.png';
 
 const styles = theme => ({
   title: {
@@ -146,7 +149,7 @@ class Nav extends React.Component {
               className={`${classes.buttonStyle} ${classes.hideListMenu}`}
               onClick={this.toggleDrawer('right', true)}
             >
-              Open Right
+              <Avatar src={MenuIcon} />
             </Button>
             <Drawer
               className={classes.buttonStyle}
