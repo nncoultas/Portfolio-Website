@@ -30,6 +30,12 @@ const styles = () => ({
   media: {
     height: 0,
     paddingTop: '56.25%'
+  },
+  projectColor: {
+    color: '#76c1d4'
+  },
+  viewColor: {
+    color: '#3d7c47'
   }
 });
 
@@ -55,14 +61,14 @@ class Projects extends React.Component {
             />
             <CardContent>
               <Typography
+                className={classes.projectColor}
                 gutterBottom
                 variant="headline"
                 component="h2"
-                color="secondary"
               >
                 BackWoods
               </Typography>
-              <Typography component="p" color="primary">
+              <Typography component="p">
                 Backwoods is a backwoods tracker to track trips from point A to
                 B adding waypoints to check in to along the way. <br />
                 Trips can also be shared with friends and family to be able to
@@ -84,7 +90,7 @@ class Projects extends React.Component {
                 href={'https://www.backwoods.app/'}
                 style={{ textDecoration: 'none' }}
               >
-                <Button size="small" color="secondary">
+                <Button className={classes.viewColor} size="small">
                   View Site
                 </Button>
               </a>
@@ -92,7 +98,7 @@ class Projects extends React.Component {
                 href={'https://github.com/Lambda-School-Labs/CS8-backwoods'}
                 style={{ textDecoration: 'none' }}
               >
-                <Button size="small" color="secondary">
+                <Button className={classes.viewColor} size="small">
                   View Code
                 </Button>
               </a>
@@ -106,14 +112,14 @@ class Projects extends React.Component {
             />
             <CardContent>
               <Typography
+                className={classes.projectColor}
                 gutterBottom
                 variant="headline"
                 component="h2"
-                color="secondary"
               >
                 Weather App
               </Typography>
-              <Typography component="p" color="primary">
+              <Typography component="p">
                 Weather app is a Single Page Application that uses Dark Sky API
                 to obtain the weather for the current day and four days after.{' '}
                 <br />
@@ -128,7 +134,7 @@ class Projects extends React.Component {
                 href={'https://weather-app-darksky.netlify.com/'}
                 style={{ textDecoration: 'none' }}
               >
-                <Button size="small" color="secondary">
+                <Button className={classes.viewColor} size="small">
                   View Site
                 </Button>
               </a>
@@ -136,7 +142,7 @@ class Projects extends React.Component {
                 href={'https://github.com/nncoultas/Weather-App'}
                 style={{ textDecoration: 'none' }}
               >
-                <Button size="small" color="secondary">
+                <Button className={classes.viewColor} size="small">
                   View Code
                 </Button>
               </a>
@@ -150,14 +156,14 @@ class Projects extends React.Component {
             />
             <CardContent>
               <Typography
+                className={classes.projectColor}
                 gutterBottom
                 variant="headline"
                 component="h2"
-                color="secondary"
               >
                 Lambda Notes
               </Typography>
-              <Typography component="p" color="primary">
+              <Typography component="p">
                 Lambda Notes app is targeted towards people looking for an
                 online sticky-notes type site where they can make daily notes as
                 reminders or similar to a to-do list. <br />
@@ -172,7 +178,7 @@ class Projects extends React.Component {
                 href={'https://lambda-notes-project-second.herokuapp.com/'}
                 style={{ textDecoration: 'none' }}
               >
-                <Button size="small" color="secondary">
+                <Button className={classes.viewColor} size="small">
                   View Site
                 </Button>
               </a>
@@ -180,7 +186,7 @@ class Projects extends React.Component {
                 href={'https://github.com/nncoultas/front-end-project-week'}
                 style={{ textDecoration: 'none' }}
               >
-                <Button size="small" color="secondary">
+                <Button className={classes.viewColor} size="small">
                   View Front-End Code
                 </Button>
               </a>
@@ -188,7 +194,7 @@ class Projects extends React.Component {
                 href={'https://github.com/nncoultas/back-end-project-week'}
                 style={{ textDecoration: 'none' }}
               >
-                <Button size="small" color="secondary">
+                <Button className={classes.viewColor} size="small">
                   View Back-End Code
                 </Button>
               </a>
@@ -202,14 +208,14 @@ class Projects extends React.Component {
             />
             <CardContent>
               <Typography
+                className={classes.projectColor}
                 gutterBottom
                 variant="headline"
                 component="h2"
-                color="secondary"
               >
                 Python/Javascript Notes
               </Typography>
-              <Typography component="p" color="primary">
+              <Typography component="p">
                 This is another note-taking app but built with a Javascript
                 front-end and a Python Back-end. <br />
                 This was a solo project working on both the front-end and the
@@ -223,7 +229,7 @@ class Projects extends React.Component {
                 href={'https://github.com/nncoultas/Python-Front-End'}
                 style={{ textDecoration: 'none' }}
               >
-                <Button size="small" color="secondary">
+                <Button className={classes.viewColor} size="small">
                   View Front-End Code
                 </Button>
               </a>
@@ -231,7 +237,7 @@ class Projects extends React.Component {
                 href={'https://github.com/nncoultas/djorg-cs8-1'}
                 style={{ textDecoration: 'none' }}
               >
-                <Button size="small" color="secondary">
+                <Button className={classes.viewColor} size="small">
                   View Back-End Code
                 </Button>
               </a>
