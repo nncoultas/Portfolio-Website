@@ -8,18 +8,16 @@ import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import accountCircle from './baseline-account_circle-24px.svg';
-import note from './baseline-note-24px.svg';
-import subject from './baseline-subject-24px.svg';
 import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   title: {
+    color: 'black',
     fontSize: '23px'
   },
   subTitle: {
     fontSize: '10px',
-    color: 'white'
+    color: 'black'
   },
   end: {
     display: 'flex',
@@ -35,6 +33,7 @@ const styles = theme => ({
     height: 0
   },
   hideTabs: {
+    color: 'black',
     [theme.breakpoints.down('sm')]: {
       display: 'none'
     }
@@ -98,7 +97,7 @@ class Nav extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" style={{ backgroundColor: '#2a6ccf' }}>
+        <AppBar position="static" style={{ backgroundColor: 'white' }}>
           <Tabs
             classes={{ indicator: classes.noIndicator }}
             value={value}
@@ -122,7 +121,6 @@ class Nav extends React.Component {
             <Tab
               className={classes.hideTabs}
               label="Experience"
-              icon={<img src={accountCircle} alt="account-cirlce" />}
               component={Link}
               to="/Experience"
             />
@@ -135,14 +133,12 @@ class Nav extends React.Component {
             <Tab
               className={classes.hideTabs}
               label="Projects"
-              icon={<img src={note} alt="note" />}
               component={Link}
               to="/Projects"
             />
             <Tab
               className={classes.hideTabs}
               label="Blog"
-              icon={<img src={subject} alt="subject" />}
               component={Link}
               to="/Blog"
             />
