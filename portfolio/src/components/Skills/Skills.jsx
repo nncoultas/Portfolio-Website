@@ -25,7 +25,6 @@ const styles = theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     marginBottom: '2%',
-    marginTop: '1%',
     backgroundColor: '#76c1d4',
     borderBottom: '1px solid rgba(0,0,0,.125)'
   },

@@ -18,7 +18,6 @@ const styles = () => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginTop: '1%',
     backgroundColor: '#76c1d4',
     borderBottom: '1px solid rgba(0,0,0,.125)'
   },
@@ -46,11 +45,6 @@ class Projects extends React.Component {
       <div>
         <Typography className={classes.topPageStyle} variant="display3">
           Projects
-          <Typography variant="headline">
-            Want to check out my recent projects I've been working on?
-            <br />
-            <a href="http://github.com/nncoultas">Check out my github.</a>
-          </Typography>
         </Typography>
         <div className="projectView">
           <Card className={`${classes.card}`}>
