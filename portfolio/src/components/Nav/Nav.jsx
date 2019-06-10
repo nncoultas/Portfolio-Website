@@ -105,7 +105,7 @@ class Nav extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="fixed" style={{ backgroundColor: 'white' }}>
+        <AppBar position="sticky" style={{ backgroundColor: 'white' }}>
           <Tabs
             classes={{ indicator: classes.noIndicator }}
             value={value}
