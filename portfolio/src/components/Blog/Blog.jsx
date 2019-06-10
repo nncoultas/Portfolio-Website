@@ -26,6 +26,12 @@ const styles = {
   media: {
     height: 0,
     paddingTop: '56.25%'
+  },
+  blogColor: {
+    color: '#76c1d4'
+  },
+  readColor: {
+    color: '#3d7c47'
   }
 };
 
@@ -46,14 +52,14 @@ class Blog extends React.Component {
             />
             <CardContent>
               <Typography
+                className={classes.blogColor}
                 gutterBottom
                 variant="headline"
                 component="h2"
-                color="secondary"
               >
                 5 Ways A Coding Academy Teaches You How To Be A Programmer
               </Typography>
-              <Typography component="p" color="primary">
+              <Typography component="p">
                 Background My name is Nick Coultas and I currently reside in
                 Reno, Nevada. There is a very small community here as far as
                 Programmers/Developers go. I soon realized this when I
@@ -67,7 +73,7 @@ class Blog extends React.Component {
                 }
                 style={{ textDecoration: 'none' }}
               >
-                <Button size="small" color="secondary">
+                <Button className={classes.readColor} size="small">
                   Read More
                 </Button>
               </a>

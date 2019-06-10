@@ -56,11 +56,20 @@ const styles = theme => ({
     height: '0%'
   },
   titleStyle: {
+    display: 'flex',
+    alignItems: 'center',
     marginTop: '0.5%',
     color: 'white'
   },
   textColor: {
     color: '#76c1d4'
+  },
+  highlightColor: {
+    color: 'white',
+    backgroundColor: '#3d7c47'
+  },
+  underlineColor: {
+    borderBottom: '2px solid #3d7c47'
   }
 });
 
@@ -96,7 +105,10 @@ class Home extends React.Component {
             Nick Coultas
           </Typography>
           <Typography variant="headline" className={classes.titleStyle}>
-            Let's create things that make a difference.
+            Let's&nbsp;
+            <mark className={classes.highlightColor}>create things</mark>{' '}
+            &nbsp;that&nbsp;
+            <p className={classes.underlineColor}>make a difference.</p>
           </Typography>
         </Typography>
         <Typography className={classes.bottomPageStyle}>
