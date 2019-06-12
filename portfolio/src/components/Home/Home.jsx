@@ -1,4 +1,6 @@
 import React from 'react';
+import CardContent from '@material-ui/core/CardContent';
+import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
@@ -46,7 +48,10 @@ const styles = theme => ({
     }
   },
   chipLayout: {
-    width: '14%'
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '18%'
   },
   chipStyle: {
     backgroundColor: 'white',
@@ -113,25 +118,30 @@ class Home extends React.Component {
           <img src={HeadShot} className={classes.pictureStyle} />
         </Typography>
         <Typography className={classes.bottomPageStyle}>
-          <Typography className={classes.textSize}>
-            <Typography className={classes.textColor} variant="headline">
-              About Me
-            </Typography>
-            <br />
-            My passion in life has always been technology. I started from the
-            ground up exploring every avenue I could where I could learn about
-            computers and software. I took a position with Best Buy as a Sales
-            associate so I could dive into hardware and support (the roots of
-            technology). At that point in my life, I was still eager to learn
-            more and take a deeper dive into software engineering. I found an
-            intense and immersive program through Lambda School where I learned
-            Javascript, React, Redux, HTML/CSS, HTTP/AJAX, Node.js, and
-            Express.js. With my experience working on teams from a technical and
-            non-technical standpoint, I believe I could utilize my soft skills
-            and technical skills to be part of a productive development team,
-            creating meaningful code and projects.
-          </Typography>
-          <Typography className={classes.chipLayout}>
+          <Card className={classes.textSize}>
+            <CardContent>
+              <Typography>
+                <Typography className={classes.textColor} variant="headline">
+                  About Me
+                </Typography>
+                <br />
+                My passion in life has always been technology. I started from
+                the ground up exploring every avenue I could where I could learn
+                about computers and software. I took a position with Best Buy as
+                a Sales associate so I could dive into hardware and support (the
+                roots of technology). At that point in my life, I was still
+                eager to learn more and take a deeper dive into software
+                engineering. I found an intense and immersive program through
+                Lambda School where I learned Javascript, React, Redux,
+                HTML/CSS, HTTP/AJAX, Node.js, and Express.js. With my experience
+                working on teams from a technical and non-technical standpoint,
+                I believe I could utilize my soft skills and technical skills to
+                be part of a productive development team, creating meaningful
+                code and projects.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card className={classes.chipLayout}>
             <br />
             <Typography className={classes.textColor} variant="headline">
               Contact
@@ -166,7 +176,7 @@ class Home extends React.Component {
                 className={classes.chipStyle}
                 avatar={<Avatar src={EmailIcon} alt="Email Icon" />}
                 onClick={this.copyEmail}
-                label="Copy my email address"
+                label="Email address"
               />
             </a>
             <a title="Click the icon to copy my phone number" id="phone">
@@ -174,7 +184,7 @@ class Home extends React.Component {
                 className={classes.chipStyle}
                 avatar={<Avatar src={PhoneIcon} alt="Phone Icon" />}
                 onClick={this.copyPhoneNumber}
-                label="Copy my phone number"
+                label="Phone number"
               />
             </a>
             <a
@@ -191,7 +201,7 @@ class Home extends React.Component {
                 clickable
               />
             </a>
-          </Typography>
+          </Card>
         </Typography>
       </div>
     );
