@@ -23,9 +23,7 @@ const styles = theme => ({
   topPageStyle: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
-    backgroundColor: '#76c1d4',
-    borderBottom: '1px solid rgba(0,0,0,.125)'
+    alignItems: 'center'
   },
   bottomPageStyle: {
     display: 'flex',
@@ -58,6 +56,10 @@ const styles = theme => ({
   chipStyle: {
     backgroundColor: 'white',
     color: 'Black'
+  },
+  pictureStyle: {
+    width: '100%',
+    height: '94vh'
   },
   titleStyle: {
     display: 'flex',
@@ -104,16 +106,13 @@ class Home extends React.Component {
     return (
       <div className={classes.backgroundImageStyle}>
         <Typography className={classes.topPageStyle}>
-          <img src={HeadShot} />
-          <Typography variant="display3" className={classes.titleStyle}>
-            Nick Coultas
-          </Typography>
           <Typography variant="headline" className={classes.titleStyle}>
             Let's&nbsp;
             <mark className={classes.highlightColor}>create things</mark>{' '}
             &nbsp;that&nbsp;
             <p className={classes.underlineColor}>make a difference.</p>
           </Typography>
+          <img src={HeadShot} className={classes.pictureStyle} />
         </Typography>
         <Typography className={classes.bottomPageStyle}>
           <Typography className={classes.textSize}>
