@@ -4,7 +4,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
 import { withStyles } from '@material-ui/core/styles';
 
-import HeadShot from './image1.jpeg';
+import HeadShot from './portrait-photo.jpg';
 import backgroundImage from './background-image.jpg';
 import GitHubIcon from './25231.svg';
 import LinkedInIcon from './61109.svg';
@@ -59,10 +59,6 @@ const styles = theme => ({
     backgroundColor: 'white',
     color: 'Black'
   },
-  pictureStyle: {
-    width: '6%',
-    height: '0%'
-  },
   titleStyle: {
     display: 'flex',
     alignItems: 'center',
@@ -108,7 +104,7 @@ class Home extends React.Component {
     return (
       <div className={classes.backgroundImageStyle}>
         <Typography className={classes.topPageStyle}>
-          <Avatar src={HeadShot} className={classes.pictureStyle} />
+          <img src={HeadShot} />
           <Typography variant="display3" className={classes.titleStyle}>
             Nick Coultas
           </Typography>
