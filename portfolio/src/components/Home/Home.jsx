@@ -18,12 +18,7 @@ const styles = theme => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    height: '100vh'
-  },
-  topPageStyle: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
+    height: '150vh'
   },
   bottomPageStyle: {
     display: 'flex',
@@ -62,10 +57,13 @@ const styles = theme => ({
     height: '94vh'
   },
   titleStyle: {
+    position: 'absolute',
     display: 'flex',
     alignItems: 'center',
     marginTop: '0.5%',
-    color: 'white'
+    color: 'white',
+    paddingLeft: '0.5%',
+    fontSize: '283%'
   },
   textColor: {
     color: '#76c1d4'
@@ -105,7 +103,7 @@ class Home extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.backgroundImageStyle}>
-        <Typography className={classes.topPageStyle}>
+        <Typography>
           <Typography variant="headline" className={classes.titleStyle}>
             Let's&nbsp;
             <mark className={classes.highlightColor}>create things</mark>{' '}
