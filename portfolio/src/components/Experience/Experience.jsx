@@ -5,11 +5,19 @@ import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
+import backgroundImage from './background-image.jpg';
 import LambdaIcon from './1_iTABE417EkZDwRv9Uj91Qg.png';
 import BestBuyIcon from './Best-Buy-Logo.gif';
 import SafetyKleenIcon from './Safety-Kleen-Logo.png';
 
 const styles = theme => ({
+  backgroundImageStyle: {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    height: '155vh'
+  },
   topPageStyle: {
     color: 'white',
     display: 'flex',
@@ -59,7 +67,7 @@ class Experience extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
+      <div className={classes.backgroundImageStyle}>
         <Typography>
           <Typography className={classes.topPageStyle} variant="display3">
             Experience

@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import { withStyles } from '@material-ui/core/styles';
 
+import backgroundImage from './background-image.jpg';
 import JavascriptIcon from './javascript-logo.png';
 import HtmlIcon from './HTML-logo.png';
 import CIcon from './C-Logo.png';
@@ -19,6 +20,13 @@ import NodeJSIcon from './nodejs-logo.jpg';
 import DjangoIcon from './django-logo.png';
 
 const styles = theme => ({
+  backgroundImageStyle: {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    height: '150vh'
+  },
   topPageStyle: {
     color: 'white',
     display: 'flex',
@@ -67,7 +75,7 @@ class Skills extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
+      <div className={classes.backgroundImageStyle}>
         <Typography>
           <Typography variant="display3" className={classes.topPageStyle}>
             Skills

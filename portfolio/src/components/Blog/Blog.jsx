@@ -6,10 +6,19 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+
+import backgroundImage from './background-image.jpg';
 import Macbook from './clement-h-544786-unsplash.jpg';
 import './Blog.css';
 
 const styles = {
+  backgroundImageStyle: {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    height: '150vh'
+  },
   topPageStyle: {
     color: 'white',
     display: 'flex',
@@ -38,7 +47,7 @@ class Blog extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
+      <div className={classes.backgroundImageStyle}>
         <Typography className={classes.topPageStyle} variant="display3">
           Blog
         </Typography>

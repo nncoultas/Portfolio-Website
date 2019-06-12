@@ -1,10 +1,11 @@
 import React from 'react';
-import HeadShot from './image1.jpeg';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
 import { withStyles } from '@material-ui/core/styles';
 
+import HeadShot from './image1.jpeg';
+import backgroundImage from './background-image.jpg';
 import GitHubIcon from './25231.svg';
 import LinkedInIcon from './61109.svg';
 import EmailIcon from './54215.svg';
@@ -12,6 +13,13 @@ import PhoneIcon from './baseline-phone-24px.svg';
 import ResumeIcon from './resume.svg';
 
 const styles = theme => ({
+  backgroundImageStyle: {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    height: '100vh'
+  },
   topPageStyle: {
     display: 'flex',
     flexDirection: 'column',
@@ -98,7 +106,7 @@ class Home extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
+      <div className={classes.backgroundImageStyle}>
         <Typography className={classes.topPageStyle}>
           <Avatar src={HeadShot} className={classes.pictureStyle} />
           <Typography variant="display3" className={classes.titleStyle}>

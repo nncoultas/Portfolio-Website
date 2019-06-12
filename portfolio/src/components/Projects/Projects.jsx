@@ -6,6 +6,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+
+import backgroundImage from './background-image.jpg';
 import LambdaNotes from './LambdaNotes.png';
 import BackwoodsPicture from './Backwoods.jpg';
 import PythonPicture from './Python.png';
@@ -13,6 +15,13 @@ import WeatherAppPicture from './WeatherApp.png';
 import './Projects.css';
 
 const styles = () => ({
+  backgroundImageStyle: {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    height: '150vh'
+  },
   topPageStyle: {
     color: 'white',
     display: 'flex',
@@ -42,7 +51,7 @@ class Projects extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
+      <div className={classes.backgroundImageStyle}>
         <Typography className={classes.topPageStyle} variant="display3">
           Projects
         </Typography>
