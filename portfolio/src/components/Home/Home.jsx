@@ -73,7 +73,7 @@ const styles = theme => ({
     backgroundColor: '#3d7c47'
   },
   underlineColor: {
-    borderBottom: '2px solid #3d7c47'
+    borderBottom: '5px solid #3d7c47'
   }
 });
 
