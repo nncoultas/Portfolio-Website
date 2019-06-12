@@ -30,15 +30,17 @@ const styles = theme => ({
     marginLeft: 'auto',
     marginRight: 'auto',
     [theme.breakpoints.up('md')]: {
-      maxWidth: '55%'
+      maxWidth: '95%'
     },
     [theme.breakpoints.down('sm')]: {
+      maxWidth: '60%',
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      alignItems: 'center'
     }
   },
   textSize: {
-    width: '57%',
+    width: '34%',
     color: 'black',
     [theme.breakpoints.down('md')]: {
       width: '76%'
@@ -51,7 +53,11 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    width: '18%'
+    width: '18%',
+    [theme.breakpoints.down('sm')]: {
+      width: '68%',
+      marginTop: '5%'
+    }
   },
   chipStyle: {
     backgroundColor: 'white',
@@ -59,26 +65,28 @@ const styles = theme => ({
   },
   pictureStyle: {
     width: '100%',
-    height: '94vh'
+    height: '94vh',
+    [theme.breakpoints.down('sm')]: {
+      height: '53vh'
+    }
   },
   titleStyle: {
     position: 'absolute',
     display: 'flex',
     alignItems: 'center',
-    marginTop: '0.5%',
+    marginTop: '29.5%',
     color: 'white',
-    paddingLeft: '0.5%',
-    fontSize: '283%'
+    paddingLeft: '23%',
+    fontSize: '428%',
+    [theme.breakpoints.down('lg')]: {
+      display: 'none'
+    }
   },
   textColor: {
     color: '#76c1d4'
   },
-  highlightColor: {
-    color: 'white',
-    backgroundColor: '#3d7c47'
-  },
   underlineColor: {
-    borderBottom: '5px solid #3d7c47'
+    borderBottom: '5px solid #76c1d4'
   }
 });
 
@@ -110,9 +118,7 @@ class Home extends React.Component {
       <div className={classes.backgroundImageStyle}>
         <Typography>
           <Typography variant="headline" className={classes.titleStyle}>
-            Let's&nbsp;
-            <mark className={classes.highlightColor}>create things</mark>{' '}
-            &nbsp;that&nbsp;
+            Let's create things and&nbsp;
             <p className={classes.underlineColor}>make a difference.</p>
           </Typography>
           <img src={HeadShot} className={classes.pictureStyle} />
